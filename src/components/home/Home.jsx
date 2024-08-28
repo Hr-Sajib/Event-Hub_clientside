@@ -1,4 +1,8 @@
 import {Typewriter } from 'react-simple-typewriter';
+import Section2 from './Section2';
+import Aos from "aos";
+import 'aos/dist/aos.css';
+
 
 const Home = () => {
     return (
@@ -81,6 +85,8 @@ const Home = () => {
             
         </div>
 
+
+        <Section2/>
         {/* Facilites Typewritter Text
         <div className='ml-[40%] flex justify-between items-center mr-5 relative bottom-14'>
             <div className='w-[700px] '>
