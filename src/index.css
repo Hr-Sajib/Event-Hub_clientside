@@ -39,3 +39,26 @@
 #event1Container:hover #labelSeminar {
   left: 4.25rem;
 }
+
+.qwitcher-grypen-regular {
+  font-family: "Qwitcher Grypen", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.qwitcher-grypen-bold {
+  font-family: "Qwitcher Grypen", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
