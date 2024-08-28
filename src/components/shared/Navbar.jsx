@@ -28,7 +28,7 @@ const Navbar = () => {
         } else {
             setDropDown(true);
         }
-    };
+    }
 
     return (
         <div id='navbar' className='bg-[#d5781c]'>
@@ -52,8 +52,9 @@ const Navbar = () => {
                     </div>
 
                     <Link to="/">
-                        <div className='flex items-center'>
-                            <p className='font-josefin-sans text-3xl bg-gray-200 pt-2 px-2 rounded-md'>Events Hub</p>
+                        <div className='flex items-center bg-white rounded-md px-2'>
+                            <img className='h-9  border-black rounded-full' src="https://i.ibb.co/PYXtZ0r/1724775441626.png" alt="" />
+                            <p className='font-josefin-sans text-3xl pt-2'>Events Hub</p>
                         </div>
                     </Link>
                 </div>
