@@ -22,12 +22,17 @@ const Section3 = () => {
                 <p className="text-7xl mb-0 text-orange-400">FOODS</p>
                 <p className="text-7xl mb-0 text-orange-300">LOGISTICS</p>
                 <p className="text-7xl mb-0 text-orange-200">MEDIA</p>
+                <img data-aos="zoom-in"  className="h-[350px] relative left-[500px] bottom-[100px]" src="https://i.ibb.co/mR6PFGG/spiral.png" alt="" />
                 
             </div>
         </div>
         <div >
-            <img className="w-[400px] relative -rotate-[35deg] left-[200px] bottom-[650px] object-cover" src="https://i.ibb.co/2yjw6vG/Online-Signatures-net-830-Touch-Excellence.png" alt="" />
+            <img  className="w-[400px] relative -rotate-[35deg] left-[200px] bottom-[650px] object-cover" src="https://i.ibb.co/2yjw6vG/Online-Signatures-net-830-Touch-Excellence.png" alt="" />
         </div>
+        <div className="h-[600px]">
+
+        </div>
+      
     </>
     );
 };
