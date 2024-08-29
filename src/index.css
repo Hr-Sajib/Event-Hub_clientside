@@ -92,3 +92,17 @@
 .underline-animation:hover::before {
   transform: scaleX(1);
 }
+
+/* Custom styles for the slick slider arrows */
+.slick-prev:before,
+.slick-next:before {
+    color: #ff5733; /* Change this color to your preferred color */
+    font-size: 24px; /* Optionally, adjust the size */
+    opacity: 1; /* Ensure full visibility */
+}
+
+.playball-regular {
+  font-family: "Playball", cursive;
+  font-weight: 400;
+  font-style: normal;
+}

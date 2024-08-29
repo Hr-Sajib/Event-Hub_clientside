@@ -54,7 +54,7 @@ const Section3 = () => {
                                 {
                                     totalEventsInView &&
                                     <CountUp 
-                                        end={267} 
+                                        end={427} 
                                         duration={2} 
                                         
                                 />
@@ -67,16 +67,20 @@ const Section3 = () => {
                 </div>
                 {/* awards  */}
                 <div ref={awardssRef} data-aos="zoom-in" className="bg-orange-900 p-10 rounded-2xl w-[300px]">
-                    <p className="text-cyan-100 text-7xl">
-                                {
-                                    awardsInView &&
-                                    <CountUp 
-                                        end={11} 
-                                        duration={1} 
-                                       
-                                />
-                                }
-                    </p>
+                    <div className="flex justify-between">
+                        <p className="text-cyan-100 text-7xl">
+                                    {
+                                        awardsInView &&
+                                        <CountUp 
+                                            end={11} 
+                                            duration={1} 
+                                        
+                                    />
+                                    }
+                        </p>
+                        <img className="h-16 relative bottom-8 border-[6px] border-yellow-100 rounded-full left-8" src="https://i.ibb.co/27wpqYc/trophy-17061037.png" alt="" />
+                    </div>
+                    
                     <p className="text-white text-4xl">Awards Won</p>
                 </div>
             </div>
@@ -86,7 +90,7 @@ const Section3 = () => {
             <div className="flex gap-2 mt-2">
                  {/* Experience  */}
                  <div ref={yearssRef} data-aos="zoom-in" className="bg-orange-900 px-3 pt-3 rounded-2xl w-[300px] flex justify-center items-center gap-3">
-                    <p className="text-white text-[100px] w-[100px]">
+                    <p className="text-green-200 text-[100px] w-[100px]">
                     {
                                     yearsInView &&
                                     <CountUp 
@@ -119,11 +123,24 @@ const Section3 = () => {
                         <p className="text-white text-4xl">Countries</p>
                     </div>
                 </div>
-                {/* <img className="w-[400px] ml-3" src="https://i.ibb.co/2yjw6vG/Online-Signatures-net-830-Touch-Excellence.png" alt="" /> */}
-               
+
+                {/* Experience  */}
+                <div ref={yearssRef} data-aos="zoom-in" className="bg-orange-900 px-3 pt-3 rounded-2xl w-[300px] flex justify-center items-center gap-7">
+                    <p className="text-[#fda4af] playball-regular text-[100px] w-[100px]">
+                    {
+                                    yearsInView &&
+                                    <CountUp 
+                                        end={24} 
+                                        duration={1} 
+                                       
+                                />
+                                }
+                    </p>
+                    <p className="playball-regular text-white text-5xl relative bottom-2">Ongoing<br/>Events</p>
+                </div>
+                
             </div>
-
-
+            
         </div>
       </div>
       <div className="">

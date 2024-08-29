@@ -4,6 +4,7 @@ import Aos from "aos";
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import Section3 from './Section3';
+import Services from './Services';
 
 
 const Home = () => {
@@ -96,6 +97,7 @@ const Home = () => {
 
         <Section2/>
         <Section3/>
+        <Services/>
 
 
         {/* Facilites Typewritter Text
