@@ -4,6 +4,9 @@ import { useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
+
 
 const Section3 = () => {
 
@@ -25,6 +28,11 @@ const Section3 = () => {
 
       };
 
+      const { ref: totalEventssRef, inView: totalEventsInView } = useInView();
+      const { ref: awardssRef, inView: awardsInView } = useInView();
+      const { ref: yearssRef, inView: yearsInView } = useInView();
+      const { ref: countriessRef, inView: countriesInView } = useInView();
+
 
     return (
     <>
@@ -36,21 +44,39 @@ const Section3 = () => {
             {/* row one  */}
             <div className="flex gap-2">
                 {/* projects  */}
-                <div data-aos="zoom-in" className="bg-orange-900 p-10 rounded-2xl w-[500px] flex gap-3">
+                <div  data-aos="zoom-in" className="bg-orange-900 p-10 rounded-2xl w-[500px] flex gap-3">
                     <div className=" rounded-full h-[110px] w-[110px] flex items-center justify-center bg-white">
                         <img className="h-[60px]" src="https://i.ibb.co/NF2gp9R/calendar-17382867.png" alt="" />
                     </div>
-                    <div>
+                    <div ref={totalEventssRef}>
                         <div className="flex justify-between">
-                            <p className="text-white text-7xl">298</p>
+                            <p className="text-white text-7xl">
+                                {
+                                    totalEventsInView &&
+                                    <CountUp 
+                                        end={267} 
+                                        duration={2} 
+                                        
+                                />
+                                }
+                            </p>
                             <p className="text-6xl text-white -rotate-45 relative bottom-5 left-8">→</p>
                         </div>
                         <p className="text-white text-4xl">Events Completed</p>
                     </div>
                 </div>
                 {/* awards  */}
-                <div data-aos="zoom-in" className="bg-orange-900 p-10 rounded-2xl w-[300px]">
-                    <p className="text-cyan-100 text-7xl">11</p>
+                <div ref={awardssRef} data-aos="zoom-in" className="bg-orange-900 p-10 rounded-2xl w-[300px]">
+                    <p className="text-cyan-100 text-7xl">
+                                {
+                                    awardsInView &&
+                                    <CountUp 
+                                        end={11} 
+                                        duration={2} 
+                                       
+                                />
+                                }
+                    </p>
                     <p className="text-white text-4xl">Awards Won</p>
                 </div>
             </div>
@@ -59,8 +85,17 @@ const Section3 = () => {
             {/* row two  */}
             <div className="flex gap-2 mt-2">
                  {/* Experience  */}
-                 <div data-aos="zoom-in" className="bg-orange-900 px-3 pt-3 rounded-2xl w-[300px] flex justify-center items-center gap-3">
-                    <p className="text-white text-[100px]">12</p>
+                 <div ref={yearssRef} data-aos="zoom-in" className="bg-orange-900 px-3 pt-3 rounded-2xl w-[300px] flex justify-center items-center gap-3">
+                    <p className="text-white text-[100px]">
+                    {
+                                    yearsInView &&
+                                    <CountUp 
+                                        end={12} 
+                                        duration={2} 
+                                       
+                                />
+                                }
+                    </p>
                     <p className="text-orange-100 text-4xl">Years Of Experience</p>
                 </div>
                 {/* Countries  */}
@@ -69,8 +104,17 @@ const Section3 = () => {
                         <img className="h-[60px]" src="https://i.ibb.co/hDtht4X/globe-16267960.png" alt="" />
                     </div>
                     <div>
-                        <div className="flex justify-between">
-                            <p className="text-yellow-200 text-7xl ">7</p>
+                        <div ref={countriessRef}  className="flex justify-between">
+                            <p className="text-yellow-200 text-7xl ">
+                            {
+                                    countriesInView &&
+                                    <CountUp 
+                                        end={7} 
+                                        duration={2} 
+                                       
+                                />
+                                }
+                            </p>
                             {/* <p className="text-6xl text-white -rotate-45 relative bottom-5 left-8">→</p> */}
                         </div>
                         <p className="text-white text-4xl">Countries</p>

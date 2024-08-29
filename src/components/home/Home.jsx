@@ -14,7 +14,7 @@ const Home = () => {
 
 
     return (
-        <>
+        <div className=''>
         <div data-aos="fade-up"  className='flex gap-4 lg:mt-5 '>
 
             {/* Icon div */}
@@ -114,7 +114,7 @@ const Home = () => {
             <button className='font-josefin-sans w-96 ml-3 h-14 bg-[#d5781c] text-white text-xl rounded-xl'>Contact Us</button>
         </div> */}
 
-        </>
+        </div>
     );
 };
 

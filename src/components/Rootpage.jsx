@@ -5,7 +5,9 @@ const Rootpage = () => {
     return (
         <div>
             <Navbar/>
+            <div className="mt-[95px]">
             <Outlet/>
+            </div>
         </div>
     );
 };
