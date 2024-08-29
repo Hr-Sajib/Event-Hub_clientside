@@ -1,7 +1,9 @@
 import Aos from "aos";
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Section3 = () => {
 
@@ -9,10 +11,24 @@ const Section3 = () => {
         Aos.init();
     }, []);
 
+    const sliderSettings = {
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        // vertical: true,
+        verticalSwiping: true,
+        swipeToSlide: true,
+        autoplay: true,
+        speed: 600,
+        autoplaySpeed: 2000,
+        arrows: false,
+
+      };
+
 
     return (
     <>
-      <div className="flex gap-4 max-w-[1500px] mx-auto mb-36">
+      <div className="flex gap-4 max-w-[1500px] mx-auto">
         <img data-aos="fade-right" className="w-[40%] rounded-3xl" src="https://i.ibb.co/KNfrjr5/12643939-5013256.jpg" alt="" />
         {/* cards div  */}
         <div className="font-josefin-sans">
@@ -64,9 +80,19 @@ const Section3 = () => {
             </div>
 
 
-
-
         </div>
+      </div>
+      <div className="bg-orange-100 mb-36 font-josefin-sans pt-3">
+        <Slider {...sliderSettings} className=" border-black">
+                                
+            <div><p className="text-7xl mb-0 text-orange-700">PLANNING</p></div>
+            <div><p className="text-7xl mb-0 text-orange-700">DESIGNING</p></div>
+            <div><p className="text-7xl mb-0 text-orange-700">DECORATION</p></div>
+            <div><p className="text-7xl mb-0 text-orange-700">FOODS</p></div>
+            <div><p className="text-7xl mb-0 text-orange-700">LOGISTICS</p></div>
+            <div><p className="text-7xl mb-0 text-orange-700">MEDIA</p></div>
+                                                
+        </Slider>
       </div>
     </>
     );
