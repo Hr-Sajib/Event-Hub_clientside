@@ -125,7 +125,7 @@ const Section3 = () => {
                 </div>
 
                 {/* Experience  */}
-                <div ref={yearssRef} data-aos="zoom-in" className="bg-orange-900 px-3 pt-3 rounded-2xl w-[300px] flex justify-center items-center gap-7">
+                <div ref={yearssRef} data-aos="zoom-in" className="bg-orange-900 px-3 pt-3 rounded-2xl w-[32s0px] flex justify-center items-center gap-10">
                     <p className="text-[#fda4af] playball-regular text-[100px] w-[100px]">
                     {
                                     yearsInView &&
@@ -153,6 +153,7 @@ const Section3 = () => {
                 <div><p className="text-7xl mb-0 text-orange-700">FOODS</p></div>
                 <div><p className="text-7xl mb-0 text-orange-700">LOGISTICS</p></div>
                 <div><p className="text-7xl mb-0 text-orange-700">MEDIA</p></div>
+                <div><p className="text-7xl mb-0 text-orange-700">SECURITY</p></div>
                                                     
             </Slider>
         </div>
