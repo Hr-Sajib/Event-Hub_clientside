@@ -19,7 +19,7 @@
                     "venue": "Restaurant or Banquet Hall",
                     "decorations": ["Flowers", "Candles", "Table Centerpieces"],
                     "catering": ["Dinner", "Drinks", "Dessert"],
-                    "entertainment": ["Live Band or Music", "Slideshow of Memories"],
+                    "entertainment": ["Live Band or Music", "Slideshow of Memories", "Toast"],
                     "activities": ["Speech", "Toasting", "Dinner"],
                     "duration": "4-5 hours"
                 }
@@ -28,7 +28,7 @@
                 "name": "Reunion",
                 "plan": {
                     "venue": "Park or Community Center",
-                    "decorations": ["Welcome Banner", "Class Photos"],
+                    "decorations": ["Welcome Banner", "Class Photos", "Balloons"],
                     "catering": ["Buffet", "BBQ", "Potluck"],
                     "entertainment": ["Music Playlist", "Games", "Memory Wall"],
                     "activities": ["Introductions", "Photo Sessions", "Awards"],
@@ -41,7 +41,7 @@
                     "venue": "Bar or Private Home",
                     "decorations": ["Low Lighting", "Candles", "Floral Arrangements"],
                     "catering": ["Appetizers", "Cocktails", "Mocktails"],
-                    "entertainment": ["Live Jazz Band", "DJ"],
+                    "entertainment": ["Live Jazz Band", "DJ", "Background Music"],
                     "activities": ["Socializing", "Dancing", "Networking"],
                     "duration": "2-3 hours"
                 }
@@ -50,9 +50,9 @@
                 "name": "Networking Event",
                 "plan": {
                     "venue": "Conference Room or Hotel Ballroom",
-                    "decorations": ["Business Branding", "Name Tags"],
+                    "decorations": ["Business Branding", "Name Tags", "Tablecloths"],
                     "catering": ["Finger Foods", "Coffee", "Tea"],
-                    "entertainment": ["Guest Speakers", "Panel Discussions"],
+                    "entertainment": ["Guest Speakers", "Panel Discussions", "Networking Activities"],
                     "activities": ["Introductions", "Networking Sessions", "Business Card Exchange"],
                     "duration": "2-4 hours"
                 }
@@ -68,7 +68,7 @@
                     "venue": "Convention Center or Hotel",
                     "decorations": ["Stage Setup", "Banners", "Brand Logos"],
                     "catering": ["Breakfast", "Lunch", "Coffee Breaks"],
-                    "entertainment": ["Keynote Speakers", "Panel Discussions"],
+                    "entertainment": ["Keynote Speakers", "Panel Discussions", "Networking"],
                     "activities": ["Workshops", "Networking Sessions", "Q&A Sessions"],
                     "duration": "1-3 days"
                 }
@@ -79,7 +79,7 @@
                     "venue": "Auditorium or Meeting Room",
                     "decorations": ["Podium", "Projection Screen", "Brochures"],
                     "catering": ["Light Snacks", "Water", "Coffee"],
-                    "entertainment": ["Expert Speaker", "Presentation Slides"],
+                    "entertainment": ["Expert Speaker", "Presentation Slides", "Discussion"],
                     "activities": ["Lecture", "Q&A Session", "Group Discussion"],
                     "duration": "2-4 hours"
                 }
@@ -90,7 +90,7 @@
                     "venue": "Training Center or Office",
                     "decorations": ["Whiteboard", "Flip Charts", "Writing Materials"],
                     "catering": ["Lunch", "Snacks", "Beverages"],
-                    "entertainment": ["Interactive Activities", "Case Studies"],
+                    "entertainment": ["Interactive Activities", "Case Studies", "Role Playing"],
                     "activities": ["Hands-on Training", "Team Exercises", "Feedback Sessions"],
                     "duration": "1-2 days"
                 }
@@ -101,7 +101,7 @@
                     "venue": "Showroom or Event Space",
                     "decorations": ["Product Displays", "Company Banners", "Lighting Effects"],
                     "catering": ["Cocktails", "Canapés", "Desserts"],
-                    "entertainment": ["Demo Presentation", "Media Coverage"],
+                    "entertainment": ["Demo Presentation", "Media Coverage", "Live Music"],
                     "activities": ["Product Unveiling", "Q&A with Executives", "Networking"],
                     "duration": "2-3 hours"
                 }
@@ -110,9 +110,9 @@
                 "name": "Corporate Retreat",
                 "plan": {
                     "venue": "Resort or Country Club",
-                    "decorations": ["Welcome Signs", "Team Banners"],
+                    "decorations": ["Welcome Signs", "Team Banners", "Event Program"],
                     "catering": ["Full Meals", "Snacks", "Drinks"],
-                    "entertainment": ["Team Building Activities", "Outdoor Games"],
+                    "entertainment": ["Team Building Activities", "Outdoor Games", "Evening Social"],
                     "activities": ["Workshops", "Team Bonding Exercises", "Relaxation Time"],
                     "duration": "1-2 days"
                 }
@@ -126,9 +126,9 @@
                 "name": "Family Reunion",
                 "plan": {
                     "venue": "Family Home or Park",
-                    "decorations": ["Family Photos", "Welcome Banner"],
+                    "decorations": ["Family Photos", "Welcome Banner", "Balloons"],
                     "catering": ["Potluck", "BBQ", "Drinks"],
-                    "entertainment": ["Music Playlist", "Family Games"],
+                    "entertainment": ["Music Playlist", "Family Games", "Story Sharing"],
                     "activities": ["Photo Session", "Story Sharing", "Family Tree Display"],
                     "duration": "5-6 hours"
                 }
@@ -139,7 +139,7 @@
                     "venue": "Home or Community Hall",
                     "decorations": ["Baby-Themed Decor", "Balloons", "Gift Table"],
                     "catering": ["Light Snacks", "Cake", "Drinks"],
-                    "entertainment": ["Games", "Gift Opening"],
+                    "entertainment": ["Games", "Gift Opening", "Music"],
                     "activities": ["Baby Guessing Games", "Diaper Raffle", "Gift Opening"],
                     "duration": "2-3 hours"
                 }
@@ -148,9 +148,9 @@
                 "name": "Housewarming Party",
                 "plan": {
                     "venue": "New Home",
-                    "decorations": ["Welcome Sign", "Floral Arrangements"],
+                    "decorations": ["Welcome Sign", "Floral Arrangements", "Candles"],
                     "catering": ["Appetizers", "Drinks", "Desserts"],
-                    "entertainment": ["House Tour", "Background Music"],
+                    "entertainment": ["House Tour", "Background Music", "Socializing"],
                     "activities": ["Socializing", "Gift Opening", "Home Blessing"],
                     "duration": "3-4 hours"
                 }
@@ -159,9 +159,9 @@
                 "name": "Family Picnic",
                 "plan": {
                     "venue": "Local Park or Beach",
-                    "decorations": ["Picnic Blankets", "Umbrellas"],
+                    "decorations": ["Picnic Blankets", "Umbrellas", "Tablecloths"],
                     "catering": ["Sandwiches", "Fruit", "Beverages"],
-                    "entertainment": ["Outdoor Games", "Music"],
+                    "entertainment": ["Outdoor Games", "Music", "Sports"],
                     "activities": ["Picnic Lunch", "Frisbee", "Soccer"],
                     "duration": "4-5 hours"
                 }
@@ -172,7 +172,7 @@
                     "venue": "Church, Garden, or Banquet Hall",
                     "decorations": ["Flowers", "Wedding Arch", "Candles"],
                     "catering": ["Full Course Meal", "Cake", "Champagne"],
-                    "entertainment": ["Live Band or DJ", "Dance Floor"],
+                    "entertainment": ["Live Band or DJ", "Dance Floor", "Photo Booth"],
                     "activities": ["Ceremony", "Reception", "Speeches"],
                     "duration": "5-6 hours"
                 }
@@ -188,7 +188,7 @@
                     "venue": "Art Gallery or Museum",
                     "decorations": ["Art Displays", "Lighting", "Signage"],
                     "catering": ["Wine", "Cheese", "Light Snacks"],
-                    "entertainment": ["Artist Talk", "Live Painting"],
+                    "entertainment": ["Artist Talk", "Live Painting", "Music"],
                     "activities": ["Art Viewing", "Networking", "Q&A"],
                     "duration": "3-4 hours"
                 }
@@ -199,7 +199,7 @@
                     "venue": "Outdoor Venue or Concert Hall",
                     "decorations": ["Stage Setup", "Banners", "Lighting Effects"],
                     "catering": ["Food Stalls", "Drinks", "Snacks"],
-                    "entertainment": ["Live Bands", "Solo Performances"],
+                    "entertainment": ["Live Bands", "Solo Performances", "Dance Shows"],
                     "activities": ["Music Performances", "Dance Areas", "Vendor Booths"],
                     "duration": "Full Day or Multi-day"
                 }
@@ -208,153 +208,33 @@
                 "name": "Film Screening",
                 "plan": {
                     "venue": "Cinema or Open Air Theater",
-                    "decorations": ["Red Carpet", "Movie Posters"],
+                    "decorations": ["Red Carpet", "Movie Posters", "Spotlights"],
                     "catering": ["Popcorn", "Drinks", "Snacks"],
-                    "entertainment": ["Film Introduction", "Post-screening Q&A"],
-                    "activities": ["Film Viewing", "Panel Discussion", "Networking"],
+                    "entertainment": ["Film Introduction", "Post-screening Q&A", "Guest Speakers"],
+                    "activities": ["Film Viewing", "Discussion", "Autograph Signing"],
                     "duration": "2-3 hours"
                 }
             },
             {
-                "name": "Theatre Performance",
+                "name": "Cultural Festival",
                 "plan": {
-                    "venue": "Theater or Community Center",
-                    "decorations": ["Stage Setup", "Props", "Lighting"],
-                    "catering": ["Concessions", "Drinks"],
-                    "entertainment": ["Live Play", "Intermission"],
-                    "activities": ["Audience Interaction", "Curtain Call", "Meet the Cast"],
-                    "duration": "2-3 hours"
-                }
-            },
-            {
-                "name": "Cultural Fair",
-                "plan": {
-                    "venue": "Community Hall or School Ground",
-                    "decorations": ["Booths", "Banners", "Flags"],
-                    "catering": ["Ethnic Food Stalls", "Drinks"],
-                    "entertainment": ["Dance Performances", "Music"],
-                    "activities": ["Cultural Exhibits", "Craft Workshops", "Parade"],
-                    "duration": "Full Day"
-                }
-            }
-        ]
-    },
-    {
-        "eventType": "Religious",
-        "events": [
-            {
-                "name": "Wedding Ceremony",
-                "plan": {
-                    "venue": "Church, Temple, or Mosque",
-                    "decorations": ["Floral Arrangements", "Candles", "Altar Setup"],
-                    "catering": ["Reception Meal", "Wedding Cake", "Drinks"],
-                    "entertainment": ["Religious Hymns", "Live Music"],
-                    "activities": ["Ceremony", "Vows Exchange", "Reception"],
-                    "duration": "3-5 hours"
-                }
-            },
-            {
-                "name": "Religious Festival",
-                "plan": {
-                    "venue": "Temple, Church, or Open Ground",
-                    "decorations": ["Religious Icons", "Flowers", "Lights"],
-                    "catering": ["Traditional Dishes", "Sweets", "Drinks"],
-                    "entertainment": ["Prayers", "Singing", "Processions"],
-                    "activities": ["Worship", "Rituals", "Community Gathering"],
+                    "venue": "Community Center or Park",
+                    "decorations": ["Cultural Banners", "Flags", "Traditional Art"],
+                    "catering": ["Ethnic Foods", "Drinks", "Desserts"],
+                    "entertainment": ["Traditional Music", "Dance Performances", "Craft Demonstrations"],
+                    "activities": ["Workshops", "Exhibitions", "Parade"],
                     "duration": "Full Day"
                 }
             },
             {
-                "name": "Baptism",
+                "name": "Theater Play",
                 "plan": {
-                    "venue": "Church or Home",
-                    "decorations": ["White Flowers", "Candles"],
-                    "catering": ["Cake", "Finger Foods", "Juice"],
-                    "entertainment": ["Religious Songs", "Piano or Organ Music"],
-                    "activities": ["Ceremony", "Blessing", "Reception"],
-                    "duration": "1-2 hours"
-                }
-            },
-            {
-                "name": "Confirmation",
-                "plan": {
-                    "venue": "Church",
-                    "decorations": ["Religious Banners", "Candles"],
-                    "catering": ["Light Snacks", "Cake", "Drinks"],
-                    "entertainment": ["Choir Singing", "Organ Music"],
-                    "activities": ["Ceremony", "Blessing", "Photo Session"],
+                    "venue": "Theater or Auditorium",
+                    "decorations": ["Stage Set", "Curtains", "Lighting"],
+                    "catering": ["Drinks", "Snacks", "Intermission Treats"],
+                    "entertainment": ["Live Performance", "Intermission Activities", "Post-Show Meet and Greet"],
+                    "activities": ["Play Performance", "Intermission", "Meet the Cast"],
                     "duration": "2-3 hours"
-                }
-            },
-            {
-                "name": "Prayer Meeting",
-                "plan": {
-                    "venue": "Home or Community Hall",
-                    "decorations": ["Candles", "Prayer Mats"],
-                    "catering": ["Light Refreshments", "Water", "Tea"],
-                    "entertainment": ["Gospel Singing", "Scripture Reading"],
-                    "activities": ["Prayer Session", "Scripture Reading", "Group Discussion"],
-                    "duration": "1-2 hours"
-                }
-            }
-        ]
-    },
-    {
-        "eventType": "Educational",
-        "events": [
-            {
-                "name": "Workshop",
-                "plan": {
-                    "venue": "Training Center or School",
-                    "decorations": ["Whiteboard", "Projector"],
-                    "catering": ["Lunch", "Snacks", "Drinks"],
-                    "entertainment": ["Interactive Activities", "Case Studies"],
-                    "activities": ["Hands-on Training", "Group Discussions", "Feedback Sessions"],
-                    "duration": "1 day"
-                }
-            },
-            {
-                "name": "Seminar",
-                "plan": {
-                    "venue": "Lecture Hall or Conference Room",
-                    "decorations": ["Podium", "Presentation Materials"],
-                    "catering": ["Light Snacks", "Coffee", "Tea"],
-                    "entertainment": ["Expert Speaker", "Presentation Slides"],
-                    "activities": ["Lecture", "Q&A Session", "Networking"],
-                    "duration": "2-3 hours"
-                }
-            },
-            {
-                "name": "Training Session",
-                "plan": {
-                    "venue": "Office or Training Facility",
-                    "decorations": ["Training Materials", "Whiteboard"],
-                    "catering": ["Lunch", "Snacks", "Water"],
-                    "entertainment": ["Training Videos", "Interactive Exercises"],
-                    "activities": ["Learning Modules", "Group Activities", "Assessment"],
-                    "duration": "Half Day"
-                }
-            },
-            {
-                "name": "School Event",
-                "plan": {
-                    "venue": "School Grounds or Auditorium",
-                    "decorations": ["Stage Setup", "Student Artwork"],
-                    "catering": ["Snacks", "Drinks", "Lunch"],
-                    "entertainment": ["Student Performances", "Guest Speaker"],
-                    "activities": ["Exhibitions", "Award Ceremony", "Sports Activities"],
-                    "duration": "Full Day"
-                }
-            },
-            {
-                "name": "Science Fair",
-                "plan": {
-                    "venue": "School Gym or Community Center",
-                    "decorations": ["Project Displays", "Poster Boards"],
-                    "catering": ["Snacks", "Water"],
-                    "entertainment": ["Science Demonstrations", "Interactive Exhibits"],
-                    "activities": ["Project Presentations", "Judging", "Award Ceremony"],
-                    "duration": "Half Day"
                 }
             }
         ]

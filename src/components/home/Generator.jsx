@@ -99,7 +99,7 @@ const Generator = () => {
                     <img className="h-[100px] mx-auto " src="https://i.postimg.cc/1zzQ8FNn/down-Arrow.png" alt="" />
 
                     <div className="flex max-w-[1400px] mx-auto">
-                        <div>
+                        <div data-aos="fade-left">
                             <div className="flex gap-[2px] mb-[5px]">
                                 <div className="bg-orange-200 h-10 flex items-center p-2 w-[200px] rounded-l-md">Venue</div>
                                 <div className="bg-orange-100 h-10 flex items-center p-2 w-[400px]">{venue}</div>
@@ -150,8 +150,8 @@ const Generator = () => {
                             </div>
                         </div>
                     
-                        <div className="w-1 bg-orange-300 mx-1 h-[410px]"></div>
-                        <img className="w-[777px] h-[410px] object-cover  rounded-r-2xl" src="https://i.postimg.cc/9fJrLbfX/rustic-decorated-indoors-wedding-venue-637285-5663.jpg" alt="" />
+                        <div className="w-1 bg-orange-300 mx-1 h-[457px]"></div>
+                        <img data-aos="fade-right" className="w-[777px] h-[457px] object-cover  rounded-r-2xl" src="https://i.postimg.cc/9fJrLbfX/rustic-decorated-indoors-wedding-venue-637285-5663.jpg" alt="" />
                     
                     </div>
                 </div>
