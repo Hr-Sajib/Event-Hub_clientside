@@ -106,3 +106,17 @@
   font-weight: 400;
   font-style: normal;
 }
+
+
+.transition-bg {
+  transition: background-image 0.5s ease-in-out;
+}
+
+
+.noto-serif {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  
+}
