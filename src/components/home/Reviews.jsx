@@ -24,7 +24,7 @@ const Reviews = () => {
             "customerName": "Mark",
             "starCount": 4,
             "reviewText": "Great event for our corporate meeting. Professional and efficient.",
-            "imageSrc": "https://i.postimg.cc/tCzsJZSW/person3.jpg"
+            "imageSrc": "https://i.postimg.cc/pr1S68nn/young-attractive-man-classic-suit-straightens-his-tie-171337-9532.avif"
         },
         {
             "customerName": "Emma",
@@ -33,10 +33,10 @@ const Reviews = () => {
             "imageSrc": "https://i.postimg.cc/fRTJ9zpF/person4.jpg"
         },
         {
-            "customerName": "Juli",
+            "customerName": "Junaid",
             "starCount": 5,
             "reviewText": "Excellent for our school event. Well organized and joyful.",
-            "imageSrc": "https://i.postimg.cc/wT9BCxqv/person5.jpg"
+            "imageSrc": "https://i.postimg.cc/pdwzqdTX/muslim-guy-showcasing-proud-expression.jpg"
         },
         {
             "customerName": "Frank",
@@ -62,32 +62,31 @@ const Reviews = () => {
                 <p className="text-xl mb-10">Transforming visions into unforgettable experiences, we handle every detail—from concept to execution—ensuring your event is flawless and unique.</p>
             </div>
 
-
             <div>
                 <div data-aos="zoom-in" className="flex gap-1 max-w-[1700px] p-5 mx-auto justify-center mb-10">
                     {
                         reviews.map(r=>
                             <div key={r.customerName} onMouseEnter={()=>handleHover(r.customerName)} className="relative">
                                 <div className="relative">
-                                    <img className={`${target == r.customerName ? 'w-[450px]' : ' w-[250px]'}  h-[300px] object-cover transition-width duration-500 ease-in-out`} src={r.imageSrc} alt="" />
+                                    <img className={`${target == r.customerName ? 'w-[450px]' : ' w-[250px]'}  h-[300px] object-cover transition-width duration-500 ease-in-out rounded-xl`} src={r.imageSrc} alt="" />
                                     <div
                                     className={`${target === r.customerName 
                                         ? 'bg-gradient-to-t from-black/100 to-transparent' 
                                         : 'bg-gradient-to-t from-black/100 via-transparent to-transparent'} 
-                                        absolute inset-0 transition-bg`}
+                                        absolute inset-0 transition-bg rounded-xl`}
                                 ></div>                                </div>
                                 <div className={`${target == r.customerName ? 'top-[11rem]' : 'top-[16rem]'}  w-36 h-8 absolute inset-0 ml-1 transition-position duration-500 ease-in-out`}>
                                     <div className="flex">
                                         <p className="absolute bottom-7 text-6xl text-white">{r.customerName}</p>
                                         {
                                             Array.from({ length: 5 }, (_, i) => (
-                                                i < r.starCount ? <FaStar key={i} className="text-yellow-500" /> : <FaStar key={i} className="text-gray-300" />
+                                                i < r.starCount ? <FaStar key={i} className="text-yellow-500 ml-1" /> : <FaStar key={i} className="text-gray-300 ml-1" />
                                             ))
                                         }
                                     </div>
                                     <div className={`${target == r.customerName ? 'flex' : 'hidden'} text-gray-100 w-[360px] gap-2 mt-2`}>
                                         <p className="text-white text-5xl noto-serif h-6 w-6">"</p>
-                                        <p className="mt-1 text-xl">{r.reviewText}</p>
+                                        <p  className="mt-1 text-xl">{r.reviewText}</p>
                                     </div>
 
                                 </div>

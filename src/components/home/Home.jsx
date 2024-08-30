@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import Section3 from './Section3';
 import Services from './Services';
 import Reviews from './Reviews';
+import Generator from './Generator';
 
 
 const Home = () => {
@@ -100,24 +101,7 @@ const Home = () => {
         <Section3/>
         <Services/>
         <Reviews/>
-
-
-        {/* Facilites Typewritter Text
-        <div className='ml-[40%] flex justify-between items-center mr-5 relative bottom-14'>
-            <div className='w-[700px] '>
-                <p className='font-josefin-sans text-5xl ml-2 '><Typewriter
-                                        words={ ["P L A N N I N G", "B U D G E T I N G",  "D E C O R A T I O N", "F O O D S", "L O G I S T I C S"]}
-                                        loop={0}
-                                        cursor
-                                        cursorStyle=' >'
-                                        typeSpeed={80}
-                                        deleteSpeed={10}
-                                        delaySpeed={2000}
-                        /></p>
-            </div>
-            <button className='font-josefin-sans w-96 ml-3 h-14 bg-[#d5781c] text-white text-xl rounded-xl'>Contact Us</button>
-        </div> */}
-
+        <Generator/>
         </div>
     );
 };
