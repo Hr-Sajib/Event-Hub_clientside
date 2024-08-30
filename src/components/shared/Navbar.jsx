@@ -31,7 +31,7 @@ const Navbar = () => {
     }
 
     return (
-        <div id='navbar' className='bg-[#d5781c] bg-opacity-60 fixed top-0 left-0 z-10 w-full backdrop-blur-md'>
+        <div id='navbar' className=' bg-[#d5781c] bg-opacity-60 fixed top-0 left-0 z-10 w-full backdrop-blur-md'>
             <div className='lg:border-0 border h-20 flex justify-between items-center lg:px-[5%] px-4 font-ob lg:mr-2'>
                 {/* Icon Div */}
                 <div className='flex items-center gap-1'>
