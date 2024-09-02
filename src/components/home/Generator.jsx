@@ -154,10 +154,10 @@ const Generator = () => {
                         <img data-aos="fade-right" className="w-[777px] h-[457px] object-cover  rounded-r-2xl" src="https://i.postimg.cc/9fJrLbfX/rustic-decorated-indoors-wedding-venue-637285-5663.jpg" alt="" />
                     
                     </div>
+                    <p className="text-gray-400">This system suggests a basic possible plan for your event. Please consider contacting us to get proffessional Event plan</p>
                 </div>
 
                 }
-
 
 
             </div>

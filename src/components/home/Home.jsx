@@ -7,6 +7,7 @@ import Section3 from './Section3';
 import Services from './Services';
 import Reviews from './Reviews';
 import Generator from './Generator';
+import Newsletter from './Newsletter';
 
 
 const Home = () => {
@@ -102,6 +103,7 @@ const Home = () => {
         <Services/>
         <Reviews/>
         <Generator/>
+        <Newsletter/>
         </div>
     );
 };
