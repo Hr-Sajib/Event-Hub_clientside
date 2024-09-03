@@ -58,7 +58,7 @@ const Generator = () => {
                     <p data-aos="fade-up" className="text-[80px] h-[100px]">Event Guide</p>
                     <div className="absolute inset-0 top-[85px] bg-white w-[450px] h-[80px] mx-auto"></div>
                 </div>
-                <p className="text-xl text-orange-700 relative z-10">See our Automatic guide for your event</p>
+                <p className="text-xl text-orange-700 relative">See our Automatic guide for your event</p>
             </div>
 
             <div className="border mx-[115px] rounded-2xl transition-hight duration-500 ease-in-out p-5">

@@ -75,7 +75,7 @@ const Navbar = () => {
                 dropDown && (
                     <div 
                         data-aos="fade-right" 
-                        className={`bg-black text-white z-10 w-[130px] ml-3 rounded-xl fixed py-5 transition-all duration-500 ${animateExit ? 'opacity-0 translate-x-10' : 'opacity-100'}`}
+                        className={`bg-black text-white z-30 w-[130px] ml-3 rounded-xl fixed py-5 transition-all duration-500 ${animateExit ? 'opacity-0 translate-x-10' : 'opacity-100'}`}
                     >
                         <ul className='flex flex-col gap-5 pl-2'>
                             <li><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-orange-100 underline-animation"} to="/">Home</NavLink></li>

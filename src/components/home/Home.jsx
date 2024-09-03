@@ -8,6 +8,7 @@ import Services from './Services';
 import Reviews from './Reviews';
 import Generator from './Generator';
 import Newsletter from './Newsletter';
+import Contacts from './Contacts';
 
 
 const Home = () => {
@@ -104,6 +105,7 @@ const Home = () => {
         <Reviews/>
         <Generator/>
         <Newsletter/>
+        <Contacts/>
         </div>
     );
 };
