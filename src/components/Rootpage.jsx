@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import Footer from "./shared/Footer";
 import Navbar from "./shared/Navbar";
 
 const Rootpage = () => {
@@ -8,6 +9,7 @@ const Rootpage = () => {
             <div className="mt-[95px]">
             <Outlet/>
             </div>
+            <Footer/>
         </div>
     );
 };

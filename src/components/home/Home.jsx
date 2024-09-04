@@ -9,6 +9,7 @@ import Reviews from './Reviews';
 import Generator from './Generator';
 import Newsletter from './Newsletter';
 import Contacts from './Contacts';
+import Partners from './Partners';
 
 
 const Home = () => {
@@ -52,7 +53,7 @@ const Home = () => {
                    <div id="event1Container" className='relative rounded-2xl w-[610px] h-[360px] group overflow-hidden'>
                         <iframe 
                             className='h-[390px] w-[680px] transition-transform duration-500 ease-in-out group-hover:scale-110' 
-                            src="https://www.youtube.com/embed/n_cdSzb2z58?autoplay=1&mute=1&controls=0&modestbranding=1&loop=1&playlist=n_cdSzb2z58" 
+                            src="https://www.youtube.com/embed/n_cdSzb2z58 ?autoplay=1&mute=1&controls=0&modestbranding=1&loop=1&playlist=n_cdSzb2z58" 
                             frameBorder="0" 
                             allow="autoplay; encrypted-media" 
                             allowFullScreen
@@ -106,6 +107,7 @@ const Home = () => {
         <Generator/>
         <Newsletter/>
         <Contacts/>
+        <Partners/>
         </div>
     );
 };

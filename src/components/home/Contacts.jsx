@@ -28,7 +28,7 @@ const Contacts = () => {
     
         const templateParams = {
             from_name: 'EventHub', // Optional: The company or sender's name
-            user_email: userEmail,  // This is the recipient's email address
+            from_email: userEmail,  // This is the recipient's email address
             name: userName, // The name of the person filling the form
             message: userMessage, // The message content from the form
         };
@@ -40,7 +40,7 @@ const Contacts = () => {
                     Swal.fire({
                         icon: 'success',
                         title: '<p style="color: #c2410c;">Email Sent</p>',
-                        text: 'Check your email for confirmation.',
+                        text: 'Your message is sent to the EventHub team',
                         confirmButtonText: 'OK',
                         confirmButtonColor: '#c2410c'
                     });
@@ -125,7 +125,7 @@ const Contacts = () => {
                                 <input required type="text" name="name" placeholder="Your Name" className="rounded-full pl-5 h-16 w-3/5" />
                                 <input required type="text" name="email" placeholder="Your Email" className="rounded-full pl-5 h-16 w-full" />
                             </div>
-                            <textarea required type="text" name="message"   placeholder="Write your messege here ..." className="h-36 w-full rounded-3xl p-5"/>
+                            <textarea required type="text" name="message"   placeholder="Write your message here ..." className="h-36 w-full rounded-3xl p-5"/>
                             
                             <div className="flex w-3/4 justify-between pl-5 gap-10 bg-white rounded-full mt-10 p-1">
                                 <div className="flex gap-3 items-center">
