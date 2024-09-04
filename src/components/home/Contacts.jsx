@@ -6,17 +6,72 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-
 import { Link } from "react-router-dom";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import emailjs from '@emailjs/browser';
+import { useRef } from 'react';
+import Swal from 'sweetalert2';
 
 
 const Contacts = () => {
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        const formData = new FormData(form.current);
+        const userEmail = formData.get('email');
+        const userName = formData.get('name');
+        const userMessage = formData.get('message');
+    
+        const templateParams = {
+            from_name: 'EventHub', // Optional: The company or sender's name
+            user_email: userEmail,  // This is the recipient's email address
+            name: userName, // The name of the person filling the form
+            message: userMessage, // The message content from the form
+        };
+    
+        emailjs.send('service_o8upbpr', 'template_xafqw9e', templateParams, 'ZF5npbVhSWZvkYdcx')
+            .then(
+                () => {
+                    // Success alert
+                    Swal.fire({
+                        icon: 'success',
+                        title: '<p style="color: #c2410c;">Email Sent</p>',
+                        text: 'Check your email for confirmation.',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#c2410c'
+                    });
+    
+                    // Reset the form
+                    form.current.reset();
+                },
+                (error) => {
+                    // Error alert
+                    Swal.fire({
+                        icon: 'error',
+                        title: '<p style="color: #c2410c;">Error !</p>',
+                        text: 'Something went wrong. Please try again.',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#c2410c'
+                    });
+    
+                    console.log('FAILED...', error.text);
+                }
+            );
+    };
+    
+
+
     return (
         <div className="h-[500px] font-josefin-sans my-[250px]">
             <div className="h-[200px] bg-orange-100 text-orange-800 text-7xl flex justify-between pt-[100px] px-5 ">
                 <p data-aos="fade-up">Contact Us</p>
                 <p data-aos="fade-up" className="text-[100px]">Let's Talk</p>
             </div>
+
             <div className="h-full bg-orange-100 flex">
 
                 {/* contacts  */}
@@ -65,16 +120,16 @@ const Contacts = () => {
                 <div  className="w-full h-full relative bg-fixed bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://i.postimg.cc/Lsr8sgBf/Screenshot-2024-09-03-at-11-44-39-PM.png')" }}>
 
                     <div data-aos="fade-right" className="flex justify-end mr-5">
-                        <form action="" className=" w-3/4 mt-20">
+                        <form onSubmit={sendEmail} ref={form} className=" w-3/4 mt-20">
                             <div className="flex gap-5 mb-5">
-                                <input type="text" name="name" placeholder="Your Name" className="rounded-full pl-5 h-16 w-3/5" />
-                                <input type="text" name="name" placeholder="Your Email" className="rounded-full pl-5 h-16 w-full" />
+                                <input required type="text" name="name" placeholder="Your Name" className="rounded-full pl-5 h-16 w-3/5" />
+                                <input required type="text" name="email" placeholder="Your Email" className="rounded-full pl-5 h-16 w-full" />
                             </div>
-                            <textarea type="text" name="messege"   placeholder="Write your messege here ..." className="h-36 w-full rounded-3xl p-5"/>
+                            <textarea required type="text" name="message"   placeholder="Write your messege here ..." className="h-36 w-full rounded-3xl p-5"/>
                             
                             <div className="flex w-3/4 justify-between pl-5 gap-10 bg-white rounded-full mt-10 p-1">
                                 <div className="flex gap-3 items-center">
-                                    <input type="checkbox" name="" id="" className="relative bottom-[1px]"/>
+                                    <input required type="checkbox" name="" id="" className="relative bottom-[1px]"/>
                                     <p className="text-orange-800" >I hold responsibility of being agreed with the company terms and conditions</p>
                                 </div>
                                 <input type="submit" value="Send Us ►" className="bg-orange-200 rounded-full h-14 w-36 text-orange-900 font-bold p-3 text-xl hover:bg-orange-800 hover:text-white transition-color duration-500 ease-in-out border-0 border-orange-900 hover:border" />
