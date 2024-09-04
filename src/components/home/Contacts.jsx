@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 const Contacts = () => {
     return (
-        <div className="h-[500px] font-josefin-sans mb-[1000px]">
+        <div className="h-[500px] font-josefin-sans my-[250px]">
             <div className="h-[200px] bg-orange-100 text-orange-800 text-7xl flex justify-between pt-[100px] px-5 ">
                 <p data-aos="fade-up">Contact Us</p>
                 <p data-aos="fade-up" className="text-[100px]">Let's Talk</p>
@@ -52,19 +52,19 @@ const Contacts = () => {
 
                     </div>
                     {/* socials  */}
-                    <div className="flex gap-7 mt-20 ml-10">
-                        <FaFacebookF  className="text-3xl text-orange-100"  />
-                        <FaXTwitter  className="text-3xl text-orange-100"  />
-                        <FaLinkedinIn  className="text-3xl text-orange-100"  />
-                        <FaYoutube  className="text-3xl text-orange-100"  />
-                        <FaInstagram  className="text-3xl text-orange-100"  />
+                    <div data-aos="zoom-in" className="flex gap-7 mt-20 ml-10">
+                        <Link to="https://www.facebook.com/"><FaFacebookF data-aos="zoom-in"  className="text-3xl text-orange-100"  /></Link>
+                        <Link to="https://www.x.com/"><FaXTwitter   className="text-3xl text-orange-100"  /></Link>
+                        <Link to="https://www.linkedin.com/"><FaLinkedinIn   className="text-3xl text-orange-100"  /></Link>
+                        <Link to="https://www.youtube.com/"><FaYoutube   className="text-3xl text-orange-100"  /></Link>
+                        <Link to="https://www.instagram.com/"><FaInstagram   className="text-3xl text-orange-100"  /></Link>
                     </div>
 
                 </div>
                 {/* lets talk  */}
-                <div className="w-full h-full relative bg-fixed bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://i.postimg.cc/Lsr8sgBf/Screenshot-2024-09-03-at-11-44-39-PM.png')" }}>
+                <div  className="w-full h-full relative bg-fixed bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://i.postimg.cc/Lsr8sgBf/Screenshot-2024-09-03-at-11-44-39-PM.png')" }}>
 
-                    <div className="flex justify-end mr-5">
+                    <div data-aos="fade-right" className="flex justify-end mr-5">
                         <form action="" className=" w-3/4 mt-20">
                             <div className="flex gap-5 mb-5">
                                 <input type="text" name="name" placeholder="Your Name" className="rounded-full pl-5 h-16 w-3/5" />
