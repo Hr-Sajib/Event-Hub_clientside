@@ -137,7 +137,7 @@ const Contacts = () => {
                             </div>
                         </div>
                         <div className="ml-[50px]">
-                            <Link to="https://www.google.com/maps/@40.7070893,-74.0151275,17z?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D"><button className="bg-orange-100 text-orange-900 rounded-sm px-1">See in map</button></Link>
+                            <Link to="https://www.google.com/maps/@40.7070893,-74.0151275,17z?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D"><button className="bg-orange-100 text-orange-900 rounded-sm px-1 hover:bg-orange-200">See in map</button></Link>
                         </div>
                         <div  className="flex gap-5  items-center mt-10">
                             <FaPhoneAlt className="text-2xl" />

@@ -52,8 +52,7 @@ const Reviews = () => {
     const handleHover =(name)=>{
         setTarget(name);
     }
-    
-    console.log(target);
+
 
     return (
         <div className="mt-[200px] font-josefin-sans max-w-[1800px] mx-auto">

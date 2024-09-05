@@ -1,0 +1,39 @@
+[
+    {
+      "name": "HR Sajib",
+      "designation": "Event Manager",
+      "experience": "8 years, 4 companies",
+      "academicExcellence": "Masters in Event Management from New York University",
+      "image": "https://i.postimg.cc/vmhVh42p/sajib.jpg"
+    },
+    {
+      "name": "Liam Johnson",
+      "designation": "Logistics Coordinator",
+      "experience": "6 years, 3 companies",
+      "academicExcellence": "Bachelor's in Business Administration from University of California, Berkeley",
+      "image": "https://i.postimg.cc/vmbn5rhr/rifat.jpg"
+    },
+    {
+      "name": "Emma Davis",
+      "designation": "Creative Director",
+      "experience": "9 years, 5 companies",
+      "academicExcellence": "Masters in Event Design from Savannah College of Art and Design",
+      "image": "https://i.postimg.cc/RF0nDvjq/udoy.png"
+    },
+    {
+      "name": "Noah Martinez",
+      "designation": "Catering Manager",
+      "experience": "7 years, 4 companies",
+      "academicExcellence": "Diploma in Hospitality Management from Le Cordon Bleu",
+      "image": "https://i.postimg.cc/Hs1njfmr/Screenshot-2024-09-06-at-1-51-11-AM.png"
+    },
+    {
+      "name": "Ava Rodriguez",
+      "designation": "Client Relations Specialist",
+      "experience": "5 years, 2 companies",
+      "academicExcellence": "Bachelor's in Public Relations from University of Southern California",
+      "image": "https://i.postimg.cc/LX0ZdrpD/rakib.jpg"
+    }
+   
+  ]
+  

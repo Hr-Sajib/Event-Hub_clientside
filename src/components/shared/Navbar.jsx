@@ -53,7 +53,7 @@ const Navbar = () => {
                     
                     {/* Computer Icon  */}
                     <Link to="/">
-                        <div className='flex items-center justify-center bg-white rounded-md px-2 h-12 w-[12vw] ml-[5%]'>
+                        <div className='flex items-center justify-center bg-white rounded-xl px-2 h-11 w-[12vw] ml-[5%]'>
                             <img className='h-9  border-black rounded-full' src="https://i.ibb.co/PYXtZ0r/1724775441626.png" alt="" />
                             <p className='font-josefin-sans text-[1.5vw] pt-2'>Events Hub</p>
                         </div>
@@ -63,12 +63,12 @@ const Navbar = () => {
                 {/* Computer Navlinks Div */}
                 <div className='lg:flex items-center hidden  justify-center bg-orange-900 h-10 rounded-full px-16 text-lg '>
                     <ul className='flex gap-16 '>
-                        <li><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-white underline-animation"} to="/">Home</NavLink></li>
-                        <li><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-white underline-animation"} to="/book">Book an Event</NavLink></li>
-                        <li><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-white underline-animation"} to="/skills">Our Services</NavLink></li>
-                        <li><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-white underline-animation"} to="/projects">Projects</NavLink></li>
-                        <li><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-white underline-animation"} to="/blogs">Blogs</NavLink></li>
-                        <li><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-white underline-animation"} to="/contacts">Contacts</NavLink></li>
+                        <li><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-orange-200 underline-animation"} to="/">Home</NavLink></li>
+                        <li><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-orange-200 underline-animation"} to="/book">Book an Event</NavLink></li>
+                        <li><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-orange-200 underline-animation"} to="/services">Our Services</NavLink></li>
+                        <li><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-orange-200 underline-animation"} to="/projects">Projects</NavLink></li>
+                        <li><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-orange-200 underline-animation"} to="/blogs">Blogs</NavLink></li>
+                        <li><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-orange-200 underline-animation"} to="/contacts">Contacts</NavLink></li>
                     </ul>
                 </div>
             </div>

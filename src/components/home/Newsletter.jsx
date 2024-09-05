@@ -16,7 +16,6 @@ const Newsletter = () => {
       
         const name = e.target.name.value;
         const email = e.target.email.value;
-        console.log(name)
       
         try {
 
@@ -26,7 +25,6 @@ const Newsletter = () => {
             }
           })
           console.log('Sending email Info:', emailSend.data);
-
 
 
           Swal.fire({

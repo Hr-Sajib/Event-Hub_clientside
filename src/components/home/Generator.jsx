@@ -33,7 +33,6 @@ const Generator = () => {
         setEvent(event)
         const eventFiltered = events.filter(e => e.name == event)
 
-        console.log(eventFiltered)
         setEventPlan(eventFiltered[0].plan)
        
         setVenue(eventFiltered[0].plan.venue)
@@ -65,13 +64,13 @@ const Generator = () => {
 
                 <div className="mt-[50px] text-xl">
                     <p>Select the type of your event</p>
-                    <div className="flex justify-center gap-2 mt-5 ">
-                        <button onClick={()=>handleSetCategory('Social')}       className={`${(category == 'Social' ?'bg-orange-300': 'bg-orange-100')}  hover:bg-orange-200 w-[200px] h-16 rounded-md transition-color duration-500 ease-in-out`}>Social</button>
-                        <button onClick={()=>handleSetCategory('Corporate')}    className={`${(category == 'Corporate' ?'bg-orange-300': 'bg-orange-100')}  hover:bg-orange-200 w-[200px] h-16 rounded-md transition-color duration-500 ease-in-out`}>Corporate</button>
-                        <button onClick={()=>handleSetCategory('Family')}       className={`${(category == 'Family' ?'bg-orange-300': 'bg-orange-100')}  hover:bg-orange-200 w-[200px] h-16 rounded-md transition-color duration-500 ease-in-out`}>Family</button>
-                        <button onClick={()=>handleSetCategory('Cultural')}     className={`${(category == 'Cultural' ?'bg-orange-300': 'bg-orange-100')}  hover:bg-orange-200 w-[200px] h-16 rounded-md transition-color duration-500 ease-in-out`}>Cultural</button>
-                        <button onClick={()=>handleSetCategory('Religious')}    className={`${(category == 'Religious' ?'bg-orange-300': 'bg-orange-100')}  hover:bg-orange-200 w-[200px] h-16 rounded-md transition-color duration-500 ease-in-out`}>Religious</button>
-                        <button onClick={()=>handleSetCategory('Educational')}  className={`${(category == 'Educational' ?'bg-orange-300': 'bg-orange-100')}  hover:bg-orange-200 w-[200px] h-16 rounded-md transition-color duration-500 ease-in-out`}>Educational</button>
+                    <div data-aos="fade-up" className="flex justify-center gap-2 mt-5 ">
+                        <button onClick={()=>handleSetCategory('Social')}       className={`${(category == 'Social' ?'bg-orange-300': 'bg-orange-100')}  hover:bg-orange-200 w-[200px] h-16 rounded-md border-b-[.5vh] border-r-[.5vh] border-orange-400 transition-color duration-500 ease-in-out`}>Social</button>
+                        <button onClick={()=>handleSetCategory('Corporate')}    className={`${(category == 'Corporate' ?'bg-orange-300': 'bg-orange-100')}  hover:bg-orange-200 w-[200px] h-16 rounded-md transition-color duration-500 ease-in-out  border-b-[.5vh] border-r-[.5vh] border-orange-400`}>Corporate</button>
+                        <button onClick={()=>handleSetCategory('Family')}       className={`${(category == 'Family' ?'bg-orange-300': 'bg-orange-100')}  hover:bg-orange-200 w-[200px] h-16 rounded-md transition-color duration-500 ease-in-out  border-b-[.5vh] border-r-[.5vh] border-orange-400`}>Family</button>
+                        <button onClick={()=>handleSetCategory('Cultural')}     className={`${(category == 'Cultural' ?'bg-orange-300': 'bg-orange-100')}  hover:bg-orange-200 w-[200px] h-16 rounded-md transition-color duration-500 ease-in-out  border-b-[.5vh] border-r-[.5vh] border-orange-400`}>Cultural</button>
+                        <button onClick={()=>handleSetCategory('Religious')}    className={`${(category == 'Religious' ?'bg-orange-300': 'bg-orange-100')}  hover:bg-orange-200 w-[200px] h-16 rounded-md transition-color duration-500 ease-in-out  border-b-[.5vh] border-r-[.5vh] border-orange-400`}>Religious</button>
+                        <button onClick={()=>handleSetCategory('Educational')}  className={`${(category == 'Educational' ?'bg-orange-300': 'bg-orange-100')}  hover:bg-orange-200 w-[200px] h-16 rounded-md transition-color duration-500 ease-in-out  border-b-[.5vh] border-r-[.5vh] border-orange-400`}>Educational</button>
                     </div>
                 </div>
 

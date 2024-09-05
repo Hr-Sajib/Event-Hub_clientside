@@ -137,3 +137,10 @@ input:focus{
 .custom-spin {
   animation: spin 3s linear infinite;
 }
+
+.letter-spacing {
+  letter-spacing: 1rem; /* Initial spacing */
+  word-spacing: 2rem;   /* Initial word spacing */
+}
+
+
