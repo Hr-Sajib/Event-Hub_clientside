@@ -31,11 +31,11 @@ const Navbar = () => {
     }
 
     return (
-        <div id='navbar' className=' bg-[#d5781c] bg-opacity-60 fixed top-0 left-0 z-10 w-full backdrop-blur-md'>
-            <div className='lg:border-0 border h-20 flex gap-[500px] items-center px-4 lg:px-10 font-ob lg:mr-2'>
+        <div id='navbar' className=' bg-[#d5781c] bg-opacity-60 h-[8vh] fixed top-0 left-0 z-10 w-full backdrop-blur-md flex'>
+            <div className='lg:border-0 w-full border flex justify-between items-center px-4 lg:px-10 font-ob lg:mr-2'>
                 {/* Icon Div */}
                 <div className='flex items-center gap-2'>
-                    {/* Options Icon */}
+                    {/* Mobile Options Icon */}
                     <div className='lg:hidden cursor-pointer' onClick={toggleDropdown}>
                         <div className="ml-5 mr-2 transition-transform duration-500">
                             <img
@@ -50,18 +50,19 @@ const Navbar = () => {
                             />
                         </div>
                     </div>
-
+                    
+                    {/* Computer Icon  */}
                     <Link to="/">
-                        <div className='flex items-center bg-white rounded-md px-2 h-12 ml-10'>
+                        <div className='flex items-center justify-center bg-white rounded-md px-2 h-12 w-[12vw] ml-[5%]'>
                             <img className='h-9  border-black rounded-full' src="https://i.ibb.co/PYXtZ0r/1724775441626.png" alt="" />
-                            <p className='font-josefin-sans text-3xl pt-2'>Events Hub</p>
+                            <p className='font-josefin-sans text-[1.5vw] pt-2'>Events Hub</p>
                         </div>
                     </Link>
                 </div>
 
-                {/* Navlinks Div */}
-                <div>
-                    <ul className='lg:flex hidden  justify-center bg-orange-900 gap-16 h-10 w-[1000px] pt-1 rounded-full px-16 text-xl '>
+                {/* Computer Navlinks Div */}
+                <div className='lg:flex items-center hidden  justify-center bg-orange-900 h-10 rounded-full px-16 text-lg '>
+                    <ul className='flex gap-16 '>
                         <li><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-white underline-animation"} to="/">Home</NavLink></li>
                         <li><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-white underline-animation"} to="/book">Book an Event</NavLink></li>
                         <li><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-white underline-animation"} to="/skills">Our Services</NavLink></li>

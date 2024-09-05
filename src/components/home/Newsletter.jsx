@@ -68,6 +68,7 @@ const Newsletter = () => {
                         today and stay connected!
                     </p>
                     <input
+                        required
                         type="text"
                         name="name"
                         placeholder="Your Name"
@@ -75,6 +76,7 @@ const Newsletter = () => {
                     />
                     <div className="flex justify-between">
                         <input
+                            required
                             type="email"
                             name="email"
                             placeholder="Enter Your Email"
