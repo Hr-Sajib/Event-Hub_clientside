@@ -10,16 +10,69 @@ import { Link } from "react-router-dom";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import emailjs from '@emailjs/browser';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import Swal from 'sweetalert2';
 
 
 const Contacts = () => {
+    const [loading, setLoding] = useState(false);
 
     const form = useRef();
 
+    // const sendEmail = async(e) => {
+    //     setLoding(true);
+
+    //     e.preventDefault();
+
+    
+    //     const formData = new FormData(form.current);
+    //     const userEmail = formData.get('email');
+    //     const userName = formData.get('name');
+    //     const userMessage = formData.get('message');
+    
+    //     const templateParams = {
+    //         from_name: 'EventHub', // Optional: The company or sender's name
+    //         from_email: userEmail,  // This is the recipient's email address
+    //         name: userName, // The name of the person filling the form
+    //         message: userMessage, // The message content from the form
+    //     };
+    
+    //     emailjs.send('service_o8upbpr', 'template_xafqw9e', templateParams, 'ZF5npbVhSWZvkYdcx')
+    //         .then(
+    //             () => {
+    //                 // Success alert
+    //                 Swal.fire({
+    //                     icon: 'success',
+    //                     title: '<p style="color: #c2410c;">Email Sent</p>',
+    //                     text: 'Your message is sent to the EventHub team',
+    //                     confirmButtonText: 'OK',
+    //                     confirmButtonColor: '#c2410c'
+    //                 });
+    
+    //                 // Reset the form
+    //                 form.current.reset();
+    //             },
+    //             (error) => {
+    //                 // Error alert
+    //                 Swal.fire({
+    //                     icon: 'error',
+    //                     title: '<p style="color: #c2410c;">Error !</p>',
+    //                     text: 'Something went wrong. Please try again.',
+    //                     confirmButtonText: 'OK',
+    //                     confirmButtonColor: '#c2410c'
+    //                 });
+    
+    //                 console.log('FAILED...', error.text);
+    //             }
+    //         );
+
+    //         setLoding(false);
+
+    // };
+    
     const sendEmail = (e) => {
         e.preventDefault();
+        setLoding(true);
     
         const formData = new FormData(form.current);
         const userEmail = formData.get('email');
@@ -27,16 +80,15 @@ const Contacts = () => {
         const userMessage = formData.get('message');
     
         const templateParams = {
-            from_name: 'EventHub', // Optional: The company or sender's name
-            from_email: userEmail,  // This is the recipient's email address
-            name: userName, // The name of the person filling the form
-            message: userMessage, // The message content from the form
+            from_name: 'EventHub',
+            from_email: userEmail,
+            name: userName,
+            message: userMessage,
         };
     
         emailjs.send('service_o8upbpr', 'template_xafqw9e', templateParams, 'ZF5npbVhSWZvkYdcx')
             .then(
                 () => {
-                    // Success alert
                     Swal.fire({
                         icon: 'success',
                         title: '<p style="color: #c2410c;">Email Sent</p>',
@@ -44,12 +96,10 @@ const Contacts = () => {
                         confirmButtonText: 'OK',
                         confirmButtonColor: '#c2410c'
                     });
-    
-                    // Reset the form
                     form.current.reset();
+                    setLoding(false);  // Move this here to reset loading
                 },
                 (error) => {
-                    // Error alert
                     Swal.fire({
                         icon: 'error',
                         title: '<p style="color: #c2410c;">Error !</p>',
@@ -57,13 +107,12 @@ const Contacts = () => {
                         confirmButtonText: 'OK',
                         confirmButtonColor: '#c2410c'
                     });
-    
                     console.log('FAILED...', error.text);
+                    setLoding(false);  // Reset loading state after error
                 }
             );
     };
     
-
 
     return (
         <div className="h-[500px] font-josefin-sans my-[250px]">
@@ -122,17 +171,25 @@ const Contacts = () => {
                     <div data-aos="fade-right" className="flex justify-end mr-5">
                         <form onSubmit={sendEmail} ref={form} className=" w-3/4 mt-20">
                             <div className="flex gap-5 mb-5">
-                                <input required type="text" name="name" placeholder="Your Name" className="rounded-full pl-5 h-16 w-3/5" />
-                                <input required type="text" name="email" placeholder="Your Email" className="rounded-full pl-5 h-16 w-full" />
+                                <input  required type="text" name="name" placeholder="Your Name" className="rounded-full pl-5 h-16 w-3/5" />
+                                <input required  type="text" name="email" placeholder="Your Email" className="rounded-full pl-5 h-16 w-full" />
                             </div>
-                            <textarea required type="text" name="message"   placeholder="Write your message here ..." className="h-36 w-full rounded-3xl p-5"/>
+                            <textarea  required type="text" name="message"   placeholder="Write your message here ..." className="h-36 w-full rounded-3xl p-5"/>
                             
                             <div className="flex w-3/4 justify-between pl-5 gap-10 bg-white rounded-full mt-10 p-1">
                                 <div className="flex gap-3 items-center">
-                                    <input required type="checkbox" name="" id="" className="relative bottom-[1px]"/>
+                                    <input required  type="checkbox" name="" id="" className="relative bottom-[1px]"/>
                                     <p className="text-orange-800" >I hold responsibility of being agreed with the company terms and conditions</p>
                                 </div>
-                                <input type="submit" value="Send Us ►" className="bg-orange-200 rounded-full h-14 w-36 text-orange-900 font-bold p-3 text-xl hover:bg-orange-800 hover:text-white transition-color duration-500 ease-in-out border-0 border-orange-900 hover:border" />
+                                <div className='relative'>
+                                    <input data-aos="fade-right" type="submit" value={` ${loading ? '' : 'Send Us'}`} className="hover:bg-orange-200 rounded-full h-16 w-36 hover:text-orange-900 font-bold p-3 text-xl bg-orange-800 text-white transition-color duration-500 ease-in-out border-0 border-orange-900 hover:border" />
+                                    {
+                                        loading ? 
+                                        <div className=' h-10 w-10 absolute top-3 right-14'>
+                                            <img className='h-10 custom-spin' src="https://i.postimg.cc/qRVH32Nc/loading-icon.png" alt="" />
+                                        </div> : null
+                                    }
+                            </div>
                             </div>
                         </form>
                     </div>
@@ -144,4 +201,3 @@ const Contacts = () => {
 
 export default Contacts;
 
-import React from 'react';
