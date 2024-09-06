@@ -19,56 +19,6 @@ const Contacts = () => {
 
     const form = useRef();
 
-    // const sendEmail = async(e) => {
-    //     setLoding(true);
-
-    //     e.preventDefault();
-
-    
-    //     const formData = new FormData(form.current);
-    //     const userEmail = formData.get('email');
-    //     const userName = formData.get('name');
-    //     const userMessage = formData.get('message');
-    
-    //     const templateParams = {
-    //         from_name: 'EventHub', // Optional: The company or sender's name
-    //         from_email: userEmail,  // This is the recipient's email address
-    //         name: userName, // The name of the person filling the form
-    //         message: userMessage, // The message content from the form
-    //     };
-    
-    //     emailjs.send('service_o8upbpr', 'template_xafqw9e', templateParams, 'ZF5npbVhSWZvkYdcx')
-    //         .then(
-    //             () => {
-    //                 // Success alert
-    //                 Swal.fire({
-    //                     icon: 'success',
-    //                     title: '<p style="color: #c2410c;">Email Sent</p>',
-    //                     text: 'Your message is sent to the EventHub team',
-    //                     confirmButtonText: 'OK',
-    //                     confirmButtonColor: '#c2410c'
-    //                 });
-    
-    //                 // Reset the form
-    //                 form.current.reset();
-    //             },
-    //             (error) => {
-    //                 // Error alert
-    //                 Swal.fire({
-    //                     icon: 'error',
-    //                     title: '<p style="color: #c2410c;">Error !</p>',
-    //                     text: 'Something went wrong. Please try again.',
-    //                     confirmButtonText: 'OK',
-    //                     confirmButtonColor: '#c2410c'
-    //                 });
-    
-    //                 console.log('FAILED...', error.text);
-    //             }
-    //         );
-
-    //         setLoding(false);
-
-    // };
     
     const sendEmail = (e) => {
         e.preventDefault();
@@ -115,7 +65,7 @@ const Contacts = () => {
     
 
     return (
-        <div className="h-[500px] font-josefin-sans my-[250px]">
+        <div id="contactsSection" className="h-[500px] font-josefin-sans my-[250px]">
             <div className="h-[200px] bg-orange-100 text-orange-800 text-7xl flex justify-between pt-[100px] px-5 ">
                 <p data-aos="fade-up">Contact Us</p>
                 <p data-aos="fade-up" className="text-[100px]">Let's Talk</p>

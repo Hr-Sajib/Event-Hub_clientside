@@ -40,7 +40,7 @@ const Footer = () => {
     <p>
       Events Hub Ltd.
       <br />
-      Providing reliable event services since 2012
+      Providing reliable event management services since 2012
     </p>
   </aside>
   <nav className="md:place-self-center md:justify-self-end">

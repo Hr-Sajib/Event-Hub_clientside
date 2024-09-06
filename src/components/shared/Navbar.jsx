@@ -30,6 +30,46 @@ const Navbar = () => {
         }
     }
 
+
+    const handleContactsClick = (e) => {
+        e.preventDefault();
+        if (location.pathname === '/') {
+            // If already on home page, scroll to contacts section
+            document.getElementById('contactsSection').scrollIntoView({
+                behavior: 'smooth'
+            });
+        } else {
+            // Navigate to home first, then scroll to contacts section
+            navigate('/');
+            setTimeout(() => {
+                document.getElementById('contactsSection').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }, 500); // Adjust delay to match route transition time
+        }
+    };
+
+    const handleHomeClicked = (e) => {
+        e.preventDefault();
+    
+        // Always scroll to the top if already on the homepage
+        if (location === '/') {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        } else {
+            // If not on the homepage, navigate to it
+            navigate('/');
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+        }
+    };
+    
+
+
     return (
         <div id='navbar' className=' bg-[#d5781c] bg-opacity-60 h-[8vh] fixed top-0 left-0 z-10 w-full backdrop-blur-md flex'>
             <div className='lg:border-0 w-full border flex justify-between items-center px-4 lg:px-10 font-ob lg:mr-2'>
@@ -52,23 +92,21 @@ const Navbar = () => {
                     </div>
                     
                     {/* Computer Icon  */}
-                    <Link to="/">
-                        <div className='flex items-center justify-center bg-white rounded-xl px-2 h-11 w-[12vw] ml-[5%]'>
-                            <img className='h-9  border-black rounded-full' src="https://i.ibb.co/PYXtZ0r/1724775441626.png" alt="" />
-                            <p className='font-josefin-sans text-[1.5vw] pt-2'>Events Hub</p>
-                        </div>
-                    </Link>
+                    <div  onClick={handleHomeClicked} className='flex items-center justify-center bg-white rounded-xl px-2 h-11 w-[12vw] ml-[5%]'>
+                        <img className='h-9  border-black rounded-full' src="https://i.ibb.co/PYXtZ0r/1724775441626.png" alt="" />
+                        <p className='font-josefin-sans text-[1.5vw] pt-2'>Events Hub</p>
+                    </div>
                 </div>
 
                 {/* Computer Navlinks Div */}
                 <div className='lg:flex items-center hidden  justify-center bg-orange-900 h-10 rounded-full px-16 text-lg '>
                     <ul className='flex gap-16 '>
-                        <li><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-orange-200 underline-animation"} to="/">Home</NavLink></li>
+                        <li onClick={handleHomeClicked}><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-orange-200 underline-animation"} to="/">Home</NavLink></li>
                         <li><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-orange-200 underline-animation"} to="/book">Book an Event</NavLink></li>
                         <li><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-orange-200 underline-animation"} to="/services">Our Services</NavLink></li>
                         <li><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-orange-200 underline-animation"} to="/projects">Projects</NavLink></li>
                         <li><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-orange-200 underline-animation"} to="/blogs">Blogs</NavLink></li>
-                        <li><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-orange-200 underline-animation"} to="/contacts">Contacts</NavLink></li>
+                        <li onClick={handleContactsClick}><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-orange-200 underline-animation"} to="/contacts">Contacts</NavLink></li>
                     </ul>
                 </div>
             </div>

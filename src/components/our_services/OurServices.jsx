@@ -2,9 +2,8 @@ import React from 'react';
 
 const OurServices = () => {
     return (
-        <div>
-                        <p className='text-7x'>Under Development</p>
-
+        <div className="h-screen">
+            <p className='text-7xl'>Under Development ⏳</p>
         </div>
     );
 };
