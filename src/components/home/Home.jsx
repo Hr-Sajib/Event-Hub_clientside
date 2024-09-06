@@ -44,8 +44,8 @@ const Home = () => {
                     {/* Event type Seminar */}
                     <div id="event1Container" className='relative rounded-2xl w-[45%] h-[38vh] group overflow-hidden'>
                         <img className='h-full w-full rounded-2xl object-cover object-right transition-transform duration-500 ease-in-out group-hover:scale-110' src="https://i.ibb.co/bWHRfhc/1000-F-670307649-4br-Foy-XTCw9-Uc-P3o-NDJRjbqu48-XTHe4-L.jpg" alt="" />
-                        <div id="boxSeminar" className='w-[450px] h-[34vh] border-2 border-white transition-opacity duration-500 ease-in-out opacity-40 group-hover:opacity-100 rounded-2xl border-r-4 border-t-4 absolute bottom-[15px] left-6 group-hover:flex '></div>
-                        <div id="labelSeminar" className='text-orange-500 border-t-[5px] border-orange-400 w-[500px] bg-white text-2xl absolute bottom-8 left-2 transition-all duration-300 ease-in-out group-hover:left-20'>
+                        <div id="boxSeminar" className='w-[46vh] h-[35vh] border-2 border-white transition-opacity duration-500 ease-in-out opacity-40 group-hover:opacity-100 rounded-2xl border-r-4 border-t-4 absolute bottom-[15px] left-6 group-hover:flex '></div>
+                        <div id="labelSeminar" className='text-orange-500 border-t-[5px] border-orange-400 w-[500px] bg-white text-2xl absolute bottom-[5vh] left-2 transition-all duration-300 ease-in-out group-hover:left-20'>
                             <button className='font-josefin-sans relative left-2 transition-all duration-300 ease-in-out group-hover:left-10'>SEMINARS</button>
                         </div>
                     </div>
@@ -60,8 +60,8 @@ const Home = () => {
                             allowFullScreen
                             title="YouTube Video"
                         ></iframe>
-                        <div id="boxSeminar" className='w-[570px] h-[330px] border-2 border-white transition-opacity duration-500 ease-in-out opacity-40 group-hover:opacity-100 rounded-2xl border-r-4 border-t-4 absolute bottom-[15px] left-6 group-hover:flex '></div>
-                        <div id="labelSeminar" className='text-orange-500 border-b-[5px] border-orange-400 w-[680px] h-10 bg-white absolute bottom-8 left-2 transition-all duration-300 ease-in-out group-hover:left-20'>
+                        <div id="boxSeminar" className='w-[57vh] h-[35vh] border-2 border-white transition-opacity duration-500 ease-in-out opacity-40 group-hover:opacity-100 rounded-2xl border-r-4 border-t-4 absolute bottom-[15px] left-6 group-hover:flex '></div>
+                        <div id="labelSeminar" className='text-orange-500 border-b-[5px] border-orange-400 w-[680px] h-10 bg-white absolute bottom-[5vh] left-2 transition-all duration-300 ease-in-out group-hover:left-20'>
                             <button className='font-josefin-sans text-4xl relative left-2 transition-all duration-300 ease-in-out group-hover:left-10'>Parties & Concerts</button>
                         </div>
                     </div>
@@ -74,7 +74,7 @@ const Home = () => {
                         {/* Event type Wedding */}
                     <div id="event2Container" className='mt-3 relative rounded-2xl  w-[55%] h-[38vh] group overflow-hidden'>
                         <img className='w-full h-full rounded-2xl object-cover object-right transition-transform duration-500 ease-in-out group-hover:scale-110' src="https://i.ibb.co/XFG11WC/wedding.jpg" alt="" />
-                        <div id="boxSeminar" className='w-[550px] h-[350px] border-2 border-white transition-opacity duration-500 ease-in-out opacity-40 group-hover:opacity-100 rounded-2xl border-l-4 border-t-4 absolute bottom-[15px] left-6 group-hover:flex '></div>
+                        <div id="boxSeminar" className='w-[57vh] h-[35vh] border-2 border-white transition-opacity duration-500 ease-in-out opacity-40 group-hover:opacity-100 rounded-2xl border-l-4 border-t-4 absolute bottom-[15px] left-6 group-hover:flex '></div>
                         <div id="labelSeminar" className='text-orange-500 h-10 border-b-[5px] border-orange-400 w-[600px] bg-white  text-2xl absolute bottom-10 left-2 transition-all duration-300 ease-in-out group-hover:left-20'>
                             <button className='qwitcher-grypen-bold text-[90px] relative bottom-1 left-2 transition-all duration-300 ease-in-out group-hover:left-10'>Weddings</button>
                         </div>
