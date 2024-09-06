@@ -32,7 +32,7 @@ const Newsletter = () => {
             title: 'Subscribed Successfully!',
             text: 'Check your email for confirmation message',
             confirmButtonText: 'OK',
-            confirmButtonColor: '#c2410c'
+            confirmButtonColor: '#7c2d12'
 
           });
         } catch (error) {
@@ -41,7 +41,7 @@ const Newsletter = () => {
             title: 'Something went wront',
             text: 'Please try again later.',
             confirmButtonText: 'OK',
-            confirmButtonColor: '#c2410c'
+            confirmButtonColor: '#7c2d12'
           });
         }
 

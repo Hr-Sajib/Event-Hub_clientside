@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Aos from "aos";
 import 'aos/dist/aos.css';
+import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const Navbar = () => {
     const [dropDown, setDropDown] = useState(false);
     const [animateExit, setAnimateExit] = useState(false); // New state for exit animation
     const location = useLocation().pathname;
     const navigate = useNavigate();
+    const { user, logOut , setShowProfile, showProfile} = useContext(AuthContext);
 
     const handleLogOut = () => {
         // logOut function implementation
@@ -99,7 +101,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Computer Navlinks Div */}
-                <div className='lg:flex items-center hidden  justify-center bg-orange-900 h-10 rounded-full px-16 text-lg '>
+                <div className='lg:flex items-center hidden  justify-center bg-orange-900 h-10 rounded-full pl-16 pr-2 text-lg '>
                     <ul className='flex gap-16 '>
                         <li onClick={handleHomeClicked}><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-orange-200 underline-animation"} to="/">Home</NavLink></li>
                         <li><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-orange-200 underline-animation"} to="/book">Book an Event</NavLink></li>
@@ -108,7 +110,28 @@ const Navbar = () => {
                         <li><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-orange-200 underline-animation"} to="/blogs">Blogs</NavLink></li>
                         <li onClick={handleContactsClick}><NavLink className={({ isActive }) => isActive ? 'text-white underline-animation' : "text-orange-200 underline-animation"} to="/contacts">Contacts</NavLink></li>
                     </ul>
+                    
+
+                    <div data-aos="zoom-in" className=' w-[13vh]'>
+                    {
+                        // user signed in 
+                        user ?
+                        <div className='flex justify-center items-center'>
+                            <button onClick={()=>setShowProfile(!showProfile)}><img className='h-[5vh] w-[5vh] ml-[6vh] border-[5px] border-orange-900 rounded-full' src="https://i.postimg.cc/B67jKZxT/user-9303328.png" alt="" /></button>
+                        </div> 
+                        :
+                        // user not signed in 
+                        <div >
+                            <Link to="/login"><button className='text-orange-800 px-2 bg-white rounded-full ml-[6vh] '>Log In</button></Link>
+                        </div>
+                    }
+                    </div>
+
                 </div>
+
+
+            
+
             </div>
             {
                 dropDown && (

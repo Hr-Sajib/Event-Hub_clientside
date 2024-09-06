@@ -46,7 +46,7 @@ const Generator = () => {
     }
 
 
-    console.log("eventPlan: ",eventPlan);
+    // console.log("eventPlan: ",eventPlan);
 
 
 

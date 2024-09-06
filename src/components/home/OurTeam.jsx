@@ -32,21 +32,21 @@ const OurTeam = () => {
             </div>
             
             
-            <div className="flex h-[60vh] bg-gradient-to-r from-orange-100 to-gray-100 ">
+            <div className="flex justify-between h-[60vh] bg-gradient-to-r to-orange-100 from-gray-100 border">
                 {/* text  */}
                 <div data-aos="fade-down" className="pt-[10vh] pl-[5vh]">
                     <p className="font-oswald text-9xl">Unite<br/>For<br/>Excellence</p>
                 </div>
 
                 {/* persons  */}
-                <div className="grid grid-cols-2 gap-2 gap-y-10 p-2 h-[40vh] mt-[8vh] ml-[15vh]">
+                <div className="grid grid-cols-2 gap-2 gap-y-10 p-2 h-[40vh] mt-[8vh]">
 
                 {
                     team.map(person => 
                     
                     <div className="border bg-black rounded-xl w-[50vh] h-[19vh] relative p-2 flex justify-center items-center " key={person.name}>
                         
-                        <img data-aos="zoom-in" className="h-[22vh] w-[18vh] pl-2 rounded-xl object-cover object-right" src={person.image} alt="" />
+                        <img  data-aos="zoom-in" className="h-[22vh] w-[18vh] pl-2 object-cover" src={person.image} alt="" />
                         <div className="font-oswald pl-5">
                             <p className="text-white text-3xl">{person.name}</p>
                             <p className="text-orange-300 text-xl">{person.designation}</p>
@@ -60,7 +60,7 @@ const OurTeam = () => {
                     )
                 }
                 </div>
-
+               
             </div>
             
         </div>
@@ -69,11 +69,6 @@ const OurTeam = () => {
 
 export default OurTeam;
 
-{/* <div className="font-oswald ">
-                            <p className="text-white text-3xl">{person.name}</p>
-                            <p className="text-white">{person.designation}</p>
-                            <p className="text-white">{person.experience}</p>
-                            <p className="text-white">{person.academicExcellence}</p>
-                        </div> */}
+
 
                         

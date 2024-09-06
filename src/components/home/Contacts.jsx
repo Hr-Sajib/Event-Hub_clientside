@@ -41,10 +41,10 @@ const Contacts = () => {
                 () => {
                     Swal.fire({
                         icon: 'success',
-                        title: '<p style="color: #c2410c;">Email Sent</p>',
+                        title: '<p style="color: #7c2d12;">Email Sent</p>',
                         text: 'Your message is sent to the EventHub team',
                         confirmButtonText: 'OK',
-                        confirmButtonColor: '#c2410c'
+                        confirmButtonColor: '#7c2d12'
                     });
                     form.current.reset();
                     setLoding(false);  // Move this here to reset loading
@@ -52,10 +52,10 @@ const Contacts = () => {
                 (error) => {
                     Swal.fire({
                         icon: 'error',
-                        title: '<p style="color: #c2410c;">Error !</p>',
+                        title: '<p style="color: #7c2d12;">Error !</p>',
                         text: 'Something went wrong. Please try again.',
                         confirmButtonText: 'OK',
-                        confirmButtonColor: '#c2410c'
+                        confirmButtonColor: '#7c2d12'
                     });
                     console.log('FAILED...', error.text);
                     setLoding(false);  // Reset loading state after error

@@ -11,6 +11,11 @@ import BookEvent from './components/book_event/BookEvent';
 import OurServices from './components/our_services/OurServices';
 import Projects from './components/projects/Projects';
 import Blogs from './components/blogs/Blogs';
+import SignUp from './components/AuthProvider/SignUp';
+import LogIn from './components/AuthProvider/LogIn';
+import AuthProvider from './components/AuthProvider/AuthProvider';
+import TermsAndConditions from './components/TermsAndConditions';
+import ProfilePage from './components/ProfilePage';
 
 const router = createBrowserRouter([
   {
@@ -41,6 +46,22 @@ const router = createBrowserRouter([
         path: "/contacts",
         element: <Home/>,
       },
+      {
+        path: "/signup",
+        element: <SignUp/>,
+      },
+      {
+        path: "/login",
+        element: <LogIn/>,
+      },
+      {
+        path: "/terms&conditions",
+        element: <TermsAndConditions/>,
+      },
+      {
+        path: "/profile",
+        element: <ProfilePage/>,
+      },
 
     ]
   },
@@ -48,6 +69,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>,
 )
