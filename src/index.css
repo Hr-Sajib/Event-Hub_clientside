@@ -150,3 +150,16 @@ input:focus{
   font-optical-sizing: auto;
   font-weight: 300;
 }
+@keyframes rotateAr {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotateAr {
+  animation: rotateAr 5s linear infinite;
+}
+
