@@ -1,7 +1,7 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from './AuthProvider';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { LuEye, LuEyeOff } from "react-icons/lu";
 import Swal from 'sweetalert2';
 import { toast, ToastContainer } from 'react-toastify';
@@ -88,6 +88,8 @@ const SignUp = () => {
                 e.target.checkbox.checked = false;
 
                 setLoading(false);
+                navigate(location?.state ? location.state : '/');
+
             })
             .catch((error) => {
                 console.error(error);
@@ -123,6 +125,11 @@ const SignUp = () => {
             console.log(error.message);
         });
     }
+
+    useEffect(() => {
+        // Scroll to the top of the page when the component mounts
+        window.scrollTo(0, 0);
+    }, []);
 
 
 

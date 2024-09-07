@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from './AuthProvider';
@@ -11,6 +11,13 @@ const LogIn = () => {
     const [passwordShow, setPasswordShow] = useState(false);
     const [loading, setLoading] = useState(false);
     const { googleSignUp, loginUser } = useContext(AuthContext);
+
+
+    useEffect(() => {
+        // Scroll to the top of the page when the component mounts
+        window.scrollTo(0, 0);
+    }, []);
+
 
     const navigate = useNavigate();
     // Handle log in
@@ -41,14 +48,14 @@ const LogIn = () => {
                 console.log(error.message);
                 Swal.fire({
                     icon: 'error',
-                    title: '<p style="color: #7c2d12;">Log In Failed</p>',
+                    title: '<p style="color: #7c2d12;">Log In Error</p>',
                     text: 'Something went wrong. Please try again later',
                     confirmButtonText: 'OK',
                     confirmButtonColor: '#7c2d12'
                 });
             })
             .finally(() => {
-                setLoading(false); // Set loading back to false when the login completes
+                setLoading(false); 
             });
     }
 
@@ -57,9 +64,11 @@ const LogIn = () => {
         .then(async (res) => {
   
             Swal.fire({
-              title: 'Logged In',
-              icon: 'success',
-              confirmButtonText: 'OK'});
+                title: '<p style="color: #7c2d12;">Logged In Successfully</p>',
+                icon: 'success',
+                confirmButtonText: 'OK',
+                confirmButtonColor: '#7c2d12'
+            });
   
             navigate(location?.state ? location.state : '/');
   

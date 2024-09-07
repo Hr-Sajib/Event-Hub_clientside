@@ -125,7 +125,7 @@ const Navbar = () => {
                     </ul>
                     
 
-                    <div data-aos="zoom-in" className=' w-[13vh]'>
+                    <div data-aos="zoom-in" className=' w-[13.5vh]'>
                     {
                         // user signed in 
                         user ?
@@ -135,7 +135,7 @@ const Navbar = () => {
                         :
                         // user not signed in 
                         <div >
-                            <Link to="/login"><button className='text-orange-800 px-2 bg-white rounded-full ml-[6vh] '>Log In</button></Link>
+                            <Link to="/login"><button className='text-orange-800 px-2 w-[4vw] bg-white rounded-full ml-[6vh] '>Log In</button></Link>
                         </div>
                     }
                     </div>
