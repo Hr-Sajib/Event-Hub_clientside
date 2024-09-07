@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 import { deleteUser, reauthenticateWithCredential, EmailAuthProvider } from "firebase/auth";
 import auth from '../../firebase.config';
 import { useNavigate } from 'react-router-dom';
+import { GoogleAuthProvider, reauthenticateWithPopup } from "firebase/auth";
 
 const UserPage = () => {
     const [loading, setLoading] = useState(false);
@@ -77,6 +78,63 @@ const UserPage = () => {
         }
         setDeleteLoading(false); // End delete loading
     };
+
+
+
+    const handleGoogleDelete = async () => {
+        // const user = auth.currentUser;  // Get the currently logged-in user
+        if (!user) {
+            console.error("No user is currently logged in");
+            return;
+        }
+    
+        const provider = new GoogleAuthProvider();  // Create an instance of Google Auth provider
+    
+        try {
+            // Step 1: Reauthenticate user with Google
+            await reauthenticateWithPopup(user, provider);
+            console.log("User reauthenticated successfully");
+    
+            // Step 2: Delete user account
+            await deleteUser(user);
+            console.log("User account deleted successfully");
+    
+            // Optional: Redirect to a different page or show a success message
+            // navigate('/login');  // Navigate to login or another page
+            // Or display a success message to the user
+            setShowDeleteOption(false);
+            Swal.fire({
+                icon: 'success',
+                title: '<p style="color: #7c2d12;">Account Deleted</p>',
+                text: 'Your account has been successfully deleted.',
+                confirmButtonText: 'OK',
+                confirmButtonColor: '#7c2d12'
+            });
+            navigate('/');
+        } catch (error) {
+
+            Swal.fire({
+                icon: 'error',
+                title: '<p style="color: #7c2d12;">Error</p>',
+                text: 'Failed to delete account. Please try again later.',
+                confirmButtonText: 'OK',
+                confirmButtonColor: '#7c2d12'
+            });
+    
+            // Optional: Handle specific errors, such as reauthentication failure
+            if (error.code === 'auth/requires-recent-login') {
+                console.error("User needs to reauthenticate before deleting the account", error);
+                // Prompt user to reauthenticate or handle accordingly
+            } else {
+                console.error("An unexpected error occurred: ", error);
+            }
+
+
+        }
+    };
+
+
+
 
     return (
         <div className="relative h-[50vh]">
@@ -177,6 +235,43 @@ const UserPage = () => {
                                         <div className='relative'>
                                             <button
                                                 type="submit"
+                                                className="bg-red-700 text-white h-10 rounded-full p-2 hover:bg-red-600 w-[20vh]"
+                                                disabled={deleteLoading}
+                                            >
+                                                {deleteLoading ? '' : 'Sure, Delete'}
+                                            </button>
+
+                                            {deleteLoading && (
+                                                <div className="absolute inset-0 flex justify-center items-center ">
+                                                    <img
+                                                        className="h-6 custom-spin"
+                                                        src="https://i.postimg.cc/qRVH32Nc/loading-icon.png"
+                                                        alt="Loading"
+                                                    />
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                </form>
+                            )}
+
+
+                            {/* Oauth Google delete  */}
+                            {provider == 'google.com' && (
+                                <form onSubmit={handleDeleteAccount}>
+                                  
+                                    <div className="mt-5 flex justify-end relative">
+                                        <button
+                                            onClick={() => setShowDeleteOption(false)}
+                                            className="bg-green-800 hover:bg-green-700 text-white rounded-full p-2 w-[10vh] mr-2"
+                                        >
+                                            No
+                                        </button>
+
+                                        {/* Delete button with loading spinner */}
+                                        <div className='relative'>
+                                            <button
+                                                onClick={handleGoogleDelete}
                                                 className="bg-red-700 text-white h-10 rounded-full p-2 hover:bg-red-600 w-[20vh]"
                                                 disabled={deleteLoading}
                                             >
