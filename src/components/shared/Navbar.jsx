@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Aos from "aos";
 import 'aos/dist/aos.css';
@@ -6,10 +6,22 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const Navbar = () => {
     const [dropDown, setDropDown] = useState(false);
-    const [animateExit, setAnimateExit] = useState(false); // New state for exit animation
+    const [animateExit, setAnimateExit] = useState(false); 
     const location = useLocation().pathname;
     const navigate = useNavigate();
     const { user, logOut , setShowProfile, showProfile} = useContext(AuthContext);
+    const profileIconRef = useRef();
+
+    const [userImage, setUserImage] = useState('https://i.postimg.cc/B67jKZxT/user-9303328.png');
+
+    useEffect(()=>{
+        if (user && user.photoURL) {
+            setUserImage(user.photoURL);
+        }
+        else{
+            setUserImage('https://i.postimg.cc/B67jKZxT/user-9303328.png');
+        }
+    },[user])
 
     const handleLogOut = () => {
         // logOut function implementation
@@ -117,7 +129,7 @@ const Navbar = () => {
                         // user signed in 
                         user ?
                         <div className='flex justify-center items-center'>
-                            <button onClick={()=>setShowProfile(!showProfile)}><img className='h-[5vh] w-[5vh] ml-[6vh] border-[5px] border-orange-900 rounded-full' src="https://i.postimg.cc/B67jKZxT/user-9303328.png" alt="" /></button>
+                            <button ref={profileIconRef} onClick={()=>setShowProfile(!showProfile)}><img className='h-[5vh] w-[5vh] ml-[6vh] border-[5px] border-orange-900 rounded-full' src={userImage} alt="" /></button>
                         </div> 
                         :
                         // user not signed in 

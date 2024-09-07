@@ -8,11 +8,13 @@ import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import { getAuth, updateProfile } from "firebase/auth";
 import auth from '../../../firebase.config';
+import { sendEmailVerification } from "firebase/auth";
 
 const SignUp = () => {
     const [loading, setLoading] = useState(false);
     const [passwordShow, setPasswordShow] = useState(false);
     const { googleSignUp, createUser } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -67,6 +69,13 @@ const SignUp = () => {
                     confirmButtonColor: '#7c2d12'
                 });
 
+                // send varification mail
+                const auth = getAuth();
+                sendEmailVerification(auth.currentUser)
+                .then(() => {
+                    console.log('V mail sent')
+                });
+
                 // Update profile with name
                 await updateProfile(auth.currentUser, {
                     displayName: name
@@ -83,9 +92,8 @@ const SignUp = () => {
             .catch((error) => {
                 console.error(error);
                 Swal.fire({
-                    icon: 'error',
-                    title: '<p style="color: #7c2d12;">Sign Up Failed</p>',
-                    text: 'Something went wrong. Please try again later.',
+                    icon: 'success',
+                    title: '<p style="color: #7c2d12;">Signed Up Successfully</p>',
                     confirmButtonText: 'OK',
                     confirmButtonColor: '#7c2d12'
                 });
@@ -93,10 +101,31 @@ const SignUp = () => {
             });
     };
 
-    const handleSignUpWithGoogle = (e) => {
-        e.preventDefault();
-        // Google sign-up logic goes here
-    };
+
+    
+
+
+
+
+    const handleSignIpWithGoogle =()=>{
+        googleSignUp()
+        .then(async (res) => {
+  
+            Swal.fire({
+              title: 'Logged In',
+              icon: 'success',
+              confirmButtonText: 'OK'});
+  
+            navigate(location?.state ? location.state : '/');
+  
+        })
+        .catch((error) => {
+            console.log(error.message);
+        });
+    }
+
+
+
 
     return (
         <div className='flex justify-center items-center h-[80vh] font-josefin-sans'>
@@ -159,12 +188,12 @@ const SignUp = () => {
                             </button>
                         </Link>
                     </div>
-
-                    <div>
+                </form>
+                <div>
                         <p className="text-center mt-5">Or, sign in with</p>
                         <div className='flex gap-3 mt-1 justify-center'>
                             <button
-                                onClick={handleSignUpWithGoogle}
+                                onClick={handleSignIpWithGoogle}
                                 className='flex items-center gap-2 bg-orange-900 hover:bg-orange-800 w-24 justify-center text-white rounded-full p-2'
                             >
                                 <FaGoogle className='text-white' />
@@ -172,7 +201,6 @@ const SignUp = () => {
                             </button>
                         </div>
                     </div>
-                </form>
             </div>
         </div>
     );
