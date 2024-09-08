@@ -40,8 +40,11 @@ const UpcomingEvents = () => {
 
 
     return (
-        <div className='my-[50vh] mx-[3vw]'>
-            
+        <div className='mt-[10vw] mb-[5vw] mx-[3vw]'>
+            <div className="text-center mb-5 font-josefin-sans">
+                <p data-aos="fade-up" className="text-5xl"><span className='text-orange-700 opacity-65'>U p c o m i n g</span> Events</p>
+            </div>
+
             {/* cards  */}
             <div className='flex justify-center gap-1'>
                 {
