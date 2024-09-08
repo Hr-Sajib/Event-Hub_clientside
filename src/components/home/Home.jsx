@@ -11,6 +11,7 @@ import Newsletter from './Newsletter';
 import Contacts from './Contacts';
 import Partners from './Partners';
 import OurTeam from './OurTeam';
+import UpcomingEvents from './UpcomingEvents';
 
 
 const Home = () => {
@@ -99,6 +100,7 @@ const Home = () => {
 
         <Section2/>
         <Section3/>
+        <UpcomingEvents/>
         <Services/>
         <Reviews/>
         <Generator/>

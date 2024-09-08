@@ -17,7 +17,6 @@ const Navbar = () => {
     useEffect(()=>{
         if (user && user.photoURL) {
             setUserImage(user.photoURL);
-            console.log(user.photoURL)
         }
         else{
             setUserImage('https://i.postimg.cc/B67jKZxT/user-9303328.png');

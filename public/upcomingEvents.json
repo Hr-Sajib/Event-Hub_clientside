@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Corporate Leadership Summit",
+        "category": "Corporate",
+        "location": "Dhaka, Bangladesh",
+        "date": "2024-10-10",
+        "access": "Public",
+        "image": "https://i.postimg.cc/L5wy8FXv/Corporate-Leadership-Summit.jpg",
+        "organizer": "Global Business Events Ltd."
+    },
+    {
+        "name": "Cultural Heritage Festival",
+        "category": "Cultural",
+        "location": "London, UK",
+        "date": "2024-09-15",
+        "access": "Public",
+        "image": "https://i.postimg.cc/rw6n6T7w/Cultural-Heritage-Festival.jpg",
+        "organizer": "UK Cultural Foundation"
+    },
+    {
+        "name": "Educational Tech Conference",
+        "category": "Educational",
+        "location": "Sylhet, Bangladesh",
+        "date": "2024-11-20",
+        "access": "Private",
+        "image": "https://i.postimg.cc/HWhv2X25/Educational-Tech-Conference.avif",
+        "organizer": "Bangladesh Tech Innovations"
+    },
+    {
+        "name": "Family Tredition Carnival",
+        "category": "Family",
+        "location": "Toronto, Canada",
+        "date": "2024-08-18",
+        "access": "Public",
+        "image": "https://i.postimg.cc/4d4281qv/Family-Fun-Carnival.jpg",
+        "organizer": "Family Fun Events Inc."
+    },
+    {
+        "name": "Islamic Spiritual Retreat",
+        "category": "Religious",
+        "location": "Medina, Saudi Arabia",
+        "date": "2024-12-01",
+        "access": "Private",
+        "image": "https://i.postimg.cc/ZKv7Dn7Q/Islamic-Spiritual-Retreat.jpg",
+        "organizer": "Islamic Retreats International"
+    },
+    {
+        "name": "Social Networking Gala",
+        "category": "Social",
+        "location": "New York, USA",
+        "date": "2024-09-28",
+        "access": "Public",
+        "image": "https://i.postimg.cc/8cjKGz1j/Social-Networking-Gala.jpg",
+        "organizer": "Social Connect Events"
+    }
+]
