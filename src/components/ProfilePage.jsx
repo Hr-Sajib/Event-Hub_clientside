@@ -3,7 +3,7 @@ import Swal from 'sweetalert2';
 import { AuthContext } from './AuthProvider/AuthProvider';
 import Aos from "aos";
 import 'aos/dist/aos.css';
-import { deleteUser, reauthenticateWithCredential, EmailAuthProvider } from "firebase/auth";
+import { deleteUser, reauthenticateWithCredential, EmailAuthProvider, sendPasswordResetEmail } from "firebase/auth";
 import auth from '../../firebase.config';
 import { useNavigate } from 'react-router-dom';
 import { GoogleAuthProvider, reauthenticateWithPopup } from "firebase/auth";
@@ -28,13 +28,27 @@ const UserPage = () => {
     const handlePasswordChange = async () => {
         setLoading(true);
         try {
-            Swal.fire({
-                icon: 'success',
-                title: '<p style="color: #7c2d12;">Password Changed</p>',
-                text: 'Your password has been successfully updated.',
-                confirmButtonText: 'OK',
-                confirmButtonColor: '#7c2d12'
-            });
+            await sendPasswordResetEmail(auth, user.email)
+                .then(() => {
+                    Swal.fire({
+                        title: '<p style="color: #7c2d12;">Email Sent</p>',
+                        text: 'Check email to reset your password.',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#7c2d12'
+                    });
+                })
+                .catch((error) => {
+                    // Handle errors here
+                    Swal.fire({
+                        icon: 'error',
+                        title: '<p style="color: #7c2d12;">Error Password Resetting</p>',
+                        text: 'Something went wrong. Please try again later.',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#7c2d12'
+                    });
+                    console.log('Error:', error.message); // Optional logging
+                });
+    
         } catch (error) {
             Swal.fire({
                 icon: 'error',
@@ -43,9 +57,11 @@ const UserPage = () => {
                 confirmButtonText: 'OK',
                 confirmButtonColor: '#7c2d12'
             });
+            console.log('Error:', error.message); // Optional logging
         }
         setLoading(false);
     };
+    
 
     const handleDeleteAccount = async (e) => {
         e.preventDefault();

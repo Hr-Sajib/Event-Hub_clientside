@@ -94,8 +94,8 @@ const SignUp = () => {
             .catch((error) => {
                 console.error(error);
                 Swal.fire({
-                    icon: 'success',
-                    title: '<p style="color: #7c2d12;">Signed Up Successfully</p>',
+                    icon: 'error',
+                    title: '<p style="color: #7c2d12;">Sign Up Error</p>',
                     confirmButtonText: 'OK',
                     confirmButtonColor: '#7c2d12'
                 });
