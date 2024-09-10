@@ -9,6 +9,10 @@ import 'aos/dist/aos.css';
 
 const OurServices = () => {
 
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    // }, []);
+
     const [slideNumber, setSlideNumber]=useState(0);
     const imagesArray = ['https://i.ibb.co/Kjmn4Gv/146152.jpg','https://i.postimg.cc/28Z2bckZ/art-school-student-consulting-drawing-master-1262-18373.jpg','https://i.postimg.cc/9fJrLbfX/rustic-decorated-indoors-wedding-venue-637285-5663.jpg','https://i.postimg.cc/3rPCj86S/FOODS.avif','https://i.postimg.cc/zXZKbdb4/LOGISTICS.avif','https://i.postimg.cc/SR0dKmbv/portrait-fitness-influencer-23-2151564832-1.png','https://i.postimg.cc/wxGyLwt9/security-service.jpg' ]
 
@@ -133,7 +137,7 @@ const OurServices = () => {
                     <p className="text-5xl mb-5">Planning Phase</p>
                     {/* Initial Consultation and Vision Setting */}
                     <div className="my-10">
-                        <p className="text-3xl mb-5 text-orange-300">Initial Consultation and Vision Setting</p>
+                        <p className="text-3xl mb-5 text-orange-400">Initial Consultation and Vision Setting</p>
                         <p className="text-xl mb-5">Goal → Understanding the client's vision, objectives, and key priorities for the event.</p>
                         <ul className="  ml-10">
                             <li>Meet with the client to discuss their ideas, preferences, and overall theme.</li>
@@ -144,7 +148,7 @@ const OurServices = () => {
 
                     {/* Budget Development */}
                     <div className="my-10">
-                        <p className="text-3xl mb-5  text-orange-300">Budget Development</p>
+                        <p className="text-3xl mb-5  text-orange-400">Budget Development</p>
                         <p className="text-xl mb-5">Goal → Establish a comprehensive budget to ensure all aspects of the event are financially covered.</p>
                         <ul className="  ml-10">
                             <li>Identify the total event budget.</li>
@@ -155,7 +159,7 @@ const OurServices = () => {
 
                     {/* Venue Selection */}
                     <div className="my-10">
-                        <p className="text-3xl mb-5  text-orange-300">Venue Selection</p>
+                        <p className="text-3xl mb-5  text-orange-400">Venue Selection</p>
                         <p className="text-xl mb-5">Goal → Secure a venue that aligns with the client's vision, event type, and logistical needs.</p>
                         <ul className="  ml-10">
                             <li>Research venues that fit the event's theme and budget.</li>
@@ -166,7 +170,7 @@ const OurServices = () => {
 
                     {/* Timeline Creation */}
                     <div className="my-10">
-                        <p className="text-3xl mb-5  text-orange-300">Timeline and Scheduling</p>
+                        <p className="text-3xl mb-5  text-orange-400">Timeline and Scheduling</p>
                         <p className="text-xl mb-5">Goal → Create a detailed event timeline to ensure smooth coordination and flow.</p>
                         <ul className="  ml-10">
                             <li>Draft a detailed event timeline, including setup, the event itself, and teardown.</li>
@@ -177,7 +181,7 @@ const OurServices = () => {
 
                     {/* Vendor Coordination */}
                     <div className="my-10">
-                        <p className="text-3xl mb-5  text-orange-300">Vendor Coordination</p>
+                        <p className="text-3xl mb-5  text-orange-400">Vendor Coordination</p>
                         <p className="text-xl mb-5">Goal → Engage and manage all necessary vendors to provide services like catering, decor, and AV equipment.</p>
                         <ul className="  ml-10">
                             <li>Identify and hire vendors based on the event's needs and budget.</li>
@@ -188,7 +192,7 @@ const OurServices = () => {
 
                     {/* Risk Management */}
                     <div className="my-10">
-                        <p className="text-3xl mb-5  text-orange-300">Risk Management and Contingency Planning</p>
+                        <p className="text-3xl mb-5  text-orange-400">Risk Management and Contingency Planning</p>
                         <p className="text-xl mb-5">Goal → Anticipate potential risks and create contingency plans to mitigate them.</p>
                         <ul className="  ml-10">
                             <li>Identify possible risks (e.g., weather, technical failures, or delays).</li>
@@ -205,7 +209,7 @@ const OurServices = () => {
 
                     {/* Concept Development */}
                     <div className="my-10">
-                        <p className="text-3xl mb-5  text-red-300">Concept Development</p>
+                        <p className="text-3xl mb-5  text-red-400">Concept Development</p>
                         <p className="text-xl mb-5">Goal → Create a design concept that reflects the client’s vision and the event’s purpose.</p>
                         <ul className="ml-10">
                             <li>Discuss design ideas and preferences with the client.</li>
@@ -216,7 +220,7 @@ const OurServices = () => {
 
                     {/* Layout Planning */}
                     <div className="my-10">
-                        <p className="text-3xl mb-5  text-red-300">Layout Planning</p>
+                        <p className="text-3xl mb-5  text-red-400">Layout Planning</p>
                         <p className="text-xl mb-5">Goal → Plan the layout of the venue to optimize space and enhance the guest experience.</p>
                         <ul className="ml-10">
                             <li>Design floor plans that include seating arrangements, stage setup, and guest flow.</li>
@@ -227,7 +231,7 @@ const OurServices = () => {
 
                     {/* Color Scheme and Decor */}
                     <div className="my-10">
-                        <p className="text-3xl mb-5  text-red-300">Color Scheme and Decor</p>
+                        <p className="text-3xl mb-5  text-red-400">Color Scheme and Decor</p>
                         <p className="text-xl mb-5">Goal → Select a cohesive color scheme and decor elements that enhance the event’s theme.</p>
                         <ul className="ml-10">
                             <li>Choose a color palette that reflects the event’s theme and atmosphere.</li>
@@ -238,7 +242,7 @@ const OurServices = () => {
 
                     {/* Design Mockups */}
                     <div className="my-10">
-                        <p className="text-3xl mb-5  text-red-300">Design Mockups</p>
+                        <p className="text-3xl mb-5  text-red-400">Design Mockups</p>
                         <p className="text-xl mb-5">Goal → Create detailed mockups of the event setup for client approval and final adjustments.</p>
                         <ul className="ml-10">
                             <li>Produce detailed design mockups or 3D renderings of the event space.</li>
@@ -249,7 +253,7 @@ const OurServices = () => {
 
                     {/* Implementation and Setup */}
                     <div className="my-10">
-                        <p className="text-3xl mb-5  text-red-300">Implementation and Setup</p>
+                        <p className="text-3xl mb-5  text-red-400">Implementation and Setup</p>
                         <p className="text-xl mb-5">Goal → Oversee the implementation of the design concept and ensure everything is set up as planned.</p>
                         <ul className="ml-10">
                             <li>Coordinate with vendors to execute the design plan.</li>
@@ -265,7 +269,7 @@ const OurServices = () => {
 
                     {/* Theme and Style */}
                     <div className="my-10">
-                        <p className="text-3xl mb-5  text-blue-300">Theme and Style</p>
+                        <p className="text-3xl mb-5  text-blue-400">Theme and Style</p>
                         <p className="text-xl mb-5">Goal → Develop a cohesive theme and style that enhances the overall ambiance of the event.</p>
                         <ul className="ml-10">
                             <li>Determine the overall theme and style based on the client's vision.</li>
@@ -276,7 +280,7 @@ const OurServices = () => {
 
                     {/* Decor Placement */}
                     <div className="my-10">
-                        <p className="text-3xl mb-5  text-blue-300">Decor Placement</p>
+                        <p className="text-3xl mb-5  text-blue-400">Decor Placement</p>
                         <p className="text-xl mb-5">Goal → Strategically place decor items to enhance the venue's aesthetics and functionality.</p>
                         <ul className="ml-10">
                             <li>Map out the placement of major decor items (e.g., centerpieces, drapes, lighting).</li>
@@ -287,7 +291,7 @@ const OurServices = () => {
 
                     {/* Final Touches */}
                     <div className="my-10">
-                        <p className="text-3xl mb-5  text-blue-300">Final Touches</p>
+                        <p className="text-3xl mb-5  text-blue-400">Final Touches</p>
                         <p className="text-xl mb-5">Goal → Add final decorative touches to complete the look and feel of the event space.</p>
                         <ul className="ml-10">
                             <li>Add finishing touches to decor items (e.g., floral arrangements, table settings).</li>
@@ -401,7 +405,7 @@ const OurServices = () => {
 
                     {/* Media Planning */}
                     <div className="my-10">
-                        <p className="text-3xl mb-5  text-purple-300">Media Planning</p>
+                        <p className="text-3xl mb-5  text-purple-400">Media Planning</p>
                         <p className="text-xl mb-5">Goal → Develop a media strategy to promote the event and engage the audience.</p>
                         <ul className="ml-10">
                             <li>Identify target media outlets and channels for event promotion.</li>
@@ -412,7 +416,7 @@ const OurServices = () => {
 
                     {/* Content Creation */}
                     <div className="my-10">
-                        <p className="text-3xl mb-5  text-purple-300">Content Creation</p>
+                        <p className="text-3xl mb-5  text-purple-400">Content Creation</p>
                         <p className="text-xl mb-5">Goal → Produce engaging content to attract and inform the audience.</p>
                         <ul className="ml-10">
                             <li>Create promotional materials such as flyers, banners, and social media posts.</li>
@@ -423,7 +427,7 @@ const OurServices = () => {
 
                     {/* Media Coverage */}
                     <div className="my-10">
-                        <p className="text-3xl mb-5  text-purple-300">Media Coverage</p>
+                        <p className="text-3xl mb-5  text-purple-400">Media Coverage</p>
                         <p className="text-xl mb-5">Goal → Coordinate media coverage to maximize event exposure and reach.</p>
                         <ul className="ml-10">
                             <li>Arrange for media representatives to cover the event (e.g., photographers, reporters).</li>
@@ -434,7 +438,7 @@ const OurServices = () => {
 
                     {/* Post-Event Promotion */}
                     <div className="my-10">
-                        <p className="text-3xl mb-5  text-purple-300">Post-Event Promotion</p>
+                        <p className="text-3xl mb-5  text-purple-400">Post-Event Promotion</p>
                         <p className="text-xl mb-5">Goal → Promote post-event content and engage with attendees after the event.</p>
                         <ul className="ml-10">
                             <li>Share event highlights, photos, and videos through media channels.</li>

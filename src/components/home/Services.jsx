@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import { useState } from "react";
 import Aos from "aos";
 import 'aos/dist/aos.css';
+import { Link } from "react-router-dom";
 
 
 const Services = () => {
@@ -124,7 +125,7 @@ const Services = () => {
                 </Swiper>
 
                 <div className="flex justify-end mx-10 mt-10 relative bottom-[30px] right-12 z-20">
-                    <button className="bg-orange-800 rounded-xl text-white font-bold p-3 text-xl hover:bg-orange-200 hover:text-orange-900 transition-color duration-500 ease-in-out  border-0 border-orange-900 hover:border">See Our Approach</button>
+                    <Link to="/services"><button className="bg-orange-800 rounded-xl text-white font-bold p-3 text-xl hover:bg-orange-200 hover:text-orange-900 transition-color duration-500 ease-in-out  border-0 border-orange-900 hover:border">See Our Approach</button></Link>
                 </div>
 
 
