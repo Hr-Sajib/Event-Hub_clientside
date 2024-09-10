@@ -9,9 +9,9 @@ import 'aos/dist/aos.css';
 
 const OurServices = () => {
 
-    // useEffect(() => {
-    //     window.scrollTo(0, 0);
-    // }, []);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const [slideNumber, setSlideNumber]=useState(0);
     const imagesArray = ['https://i.ibb.co/Kjmn4Gv/146152.jpg','https://i.postimg.cc/28Z2bckZ/art-school-student-consulting-drawing-master-1262-18373.jpg','https://i.postimg.cc/9fJrLbfX/rustic-decorated-indoors-wedding-venue-637285-5663.jpg','https://i.postimg.cc/3rPCj86S/FOODS.avif','https://i.postimg.cc/zXZKbdb4/LOGISTICS.avif','https://i.postimg.cc/SR0dKmbv/portrait-fitness-influencer-23-2151564832-1.png','https://i.postimg.cc/wxGyLwt9/security-service.jpg' ]
