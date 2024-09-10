@@ -159,12 +159,17 @@ const UserPage = () => {
                     <h1 className="text-4xl text-center text-orange-800 mb-6">Profile Information</h1>
                     <div className="bg-orange-100 p-4 rounded-lg shadow-md mb-6">
                         <h2 className="text-2xl text-orange-700 mb-4">Basic Information</h2>
-                        <p className="text-xl mb-2">
-                            <strong>Name:</strong> {user.displayName}
-                        </p>
-                        <p className="text-xl mb-4">
-                            <strong>Email:</strong> {user.email}
-                        </p>
+                        <div className='flex gap-3 items-center '>
+                            <img data-aos="zoom-in" className='h-16 w-16 rounded-full border-2 border-orange-700' src={ user.photoURL ||  'https://i.postimg.cc/B67jKZxT/user-9303328.png'} alt="" />
+                            <div data-aos="fade-right">
+                                <p className="text-xl mb-2">
+                                <strong>Name:</strong> {user.displayName}
+                                </p>
+                                <p className="text-xl">
+                                    <strong>Email:</strong> {user.email}
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="bg-orange-100 p-4 rounded-lg shadow-md">
