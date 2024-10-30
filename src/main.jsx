@@ -16,6 +16,7 @@ import LogIn from './components/AuthProvider/LogIn';
 import AuthProvider from './components/AuthProvider/AuthProvider';
 import TermsAndConditions from './components/TermsAndConditions';
 import ProfilePage from './components/ProfilePage';
+import ProvideDetails from './components/book_event/provideDetails';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,20 @@ const router = createBrowserRouter([
       {
         path: "/book",
         element: <BookEvent/>,
+        children:[
+          {
+            path: '/book/',
+            element: <ProvideDetails/>
+          },
+          {
+            path: '/book/bookingTerms',
+            element: <ProvideDetails/>
+          },
+          {
+            path: '/book/fee&confirm',
+            element: <ProvideDetails/>
+          },
+        ]
       },
       {
         path: "/services",

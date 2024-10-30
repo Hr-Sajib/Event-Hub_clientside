@@ -92,7 +92,7 @@ const Navbar = () => {
                     </div>
                     
                     {/* Computer Icon  */}
-                    <div  onClick={handleHomeClicked} className='flex items-center justify-center bg-white rounded-xl px-2 h-11 w-[12vw] ml-[5%]'>
+                    <div  onClick={handleHomeClicked} className='flex items-center justify-center bg-white rounded-xl px-2 h-11 w-[13vw] ml-[5%]'>
                         <img className='h-9  border-black rounded-full' src="https://i.ibb.co/PYXtZ0r/1724775441626.png" alt="" />
                         <p className='font-josefin-sans text-[1.5vw] pt-2'>Events Hub</p>
                     </div>
@@ -110,7 +110,7 @@ const Navbar = () => {
                     </ul>
                     
 
-                    <div data-aos="zoom-in" className=' w-[13.5vh]'>
+                    <div data-aos="zoom-in">
                     {
                         // user signed in 
                         user ?
@@ -119,8 +119,8 @@ const Navbar = () => {
                         </div> 
                         :
                         // user not signed in 
-                        <div >
-                            <Link to="/login"><button className='text-orange-800 px-2 w-[4vw] bg-white rounded-full ml-[6vh] '>Log In</button></Link>
+                        <div className='' >
+                            <Link to="/login"><button className='text-orange-800 px-2 h-7 w-20 bg-white rounded-full ml-[5vh]'>Log In</button></Link>
                         </div>
                     }
                     </div>

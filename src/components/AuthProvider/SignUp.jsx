@@ -114,9 +114,11 @@ const SignUp = () => {
         .then(async (res) => {
   
             Swal.fire({
-              title: 'Logged In',
-              icon: 'success',
-              confirmButtonText: 'OK'});
+                icon: 'success',
+                title: '<p style="color: #7c2d12;">Logged In Successfully</p>',
+                confirmButtonText: 'OK',
+                confirmButtonColor: '#7c2d12'
+            });
   
             navigate(location?.state ? location.state : '/');
   
@@ -127,7 +129,6 @@ const SignUp = () => {
     }
 
     useEffect(() => {
-        // Scroll to the top of the page when the component mounts
         window.scrollTo(0, 0);
     }, []);
 
