@@ -44,13 +44,13 @@ const Section3 = () => {
             {/* row one  */}
             <div className="flex gap-2">
                 {/* projects  */}
-                <div  data-aos="zoom-in" className="bg-orange-900 p-10 rounded-2xl w-[500px] flex gap-3">
-                    <div className=" rounded-full h-[110px] w-[110px] flex items-center justify-center bg-white">
+                <div  data-aos="zoom-in" className="bg-orange-900 p-[3vh] rounded-2xl w-[25vw] h-[21vh] flex gap-3">
+                    <div className=" rounded-full h-[15vh] w-[15vh] flex items-center justify-center bg-white">
                         <img className="h-[60px]" src="https://i.ibb.co/NF2gp9R/calendar-17382867.png" alt="" />
                     </div>
                     <div ref={totalEventssRef}>
                         <div className="flex justify-between">
-                            <p className="text-white text-7xl">
+                            <p className="text-white text-[4vw]">
                                 {
                                     totalEventsInView &&
                                     <CountUp 
@@ -62,13 +62,13 @@ const Section3 = () => {
                             </p>
                             <p className="text-6xl text-white -rotate-45 relative bottom-5 left-8">→</p>
                         </div>
-                        <p className="text-white text-4xl">Events Completed</p>
+                        <p className="text-white text-[2vh]">Events Completed</p>
                     </div>
                 </div>
                 {/* awards  */}
-                <div ref={awardssRef} data-aos="zoom-in" className="bg-orange-900 p-10 rounded-2xl w-[300px]">
+                <div ref={awardssRef} data-aos="zoom-in" className="bg-orange-900 p-[3vh] rounded-2xl w-[300px] h-[21vh]">
                     <div className="flex justify-between">
-                        <p className="text-cyan-100 text-7xl">
+                        <p className="text-cyan-100 text-[9vh] h-[10vh]">
                                     {
                                         awardsInView &&
                                         <CountUp 
@@ -78,10 +78,10 @@ const Section3 = () => {
                                     />
                                     }
                         </p>
-                        <img className="h-16 relative bottom-8 border-[6px] border-yellow-100 rounded-full left-8" src="https://i.ibb.co/27wpqYc/trophy-17061037.png" alt="" />
+                        <img className="h-16 relative bottom-[1vh] left-[1.2vh] border-[6px] border-yellow-100 rounded-full" src="https://i.ibb.co/27wpqYc/trophy-17061037.png" alt="" />
                     </div>
                     
-                    <p className="text-white text-4xl">Awards Won</p>
+                    <p className="text-white text-[3vh]">Awards Won</p>
                 </div>
             </div>
 
@@ -89,8 +89,8 @@ const Section3 = () => {
             {/* row two  */}
             <div className="flex gap-2 mt-2">
                  {/* Experience  */}
-                 <div ref={yearssRef} data-aos="zoom-in" className="bg-orange-900 px-3 pt-3 rounded-2xl w-[300px] flex justify-center items-center gap-3">
-                    <p className="text-green-200 text-[100px] w-[100px]">
+                 <div ref={yearssRef} data-aos="zoom-in" className="bg-orange-900 p-[2vh] rounded-2xl w-[16vw] h-[20vh] flex justify-center items-center gap-3">
+                    <p className="text-green-200 text-[10vh] w-[100px]">
                     {
                                     yearsInView &&
                                     <CountUp 
@@ -100,16 +100,18 @@ const Section3 = () => {
                                 />
                                 }
                     </p>
-                    <p className="text-orange-100 text-4xl">Years Of Experience</p>
+                    <p className="text-orange-100 text-[2.5vh]">Years Of Experience</p>
                 </div>
+
+
                 {/* Countries  */}
-                <div data-aos="zoom-in" className="bg-orange-900 p-2 pl-3 justify-center items-center rounded-2xl  flex gap-3">
+                <div data-aos="zoom-in" className="bg-orange-900 p-[2vh] justify-center items-center rounded-2xl  flex gap-3">
                     <div className=" rounded-full h-[110px] w-[110px] flex items-center justify-center bg-white">
                         <img className="h-[60px]" src="https://i.ibb.co/hDtht4X/globe-16267960.png" alt="" />
                     </div>
                     <div>
                         <div ref={countriessRef}  className="flex justify-between">
-                            <p className="text-yellow-200 text-7xl ">
+                            <p className="text-yellow-200 text-[7vh] h-[8vh]">
                             {
                                     countriesInView &&
                                     <CountUp 
@@ -120,13 +122,13 @@ const Section3 = () => {
                                 }
                             </p>
                         </div>
-                        <p className="text-white text-4xl">Countries</p>
+                        <p className="text-white text-[3vh]">Countries</p>
                     </div>
                 </div>
 
-                {/* Experience  */}
-                <div ref={yearssRef} data-aos="zoom-in" className="bg-orange-900 px-3 pt-3 rounded-2xl w-[32s0px] flex justify-center items-center gap-10">
-                    <p className="text-[#fda4af] playball-regular text-[100px] w-[100px]">
+                {/* Ongoing  */}
+                <div ref={yearssRef} data-aos="zoom-in" className="bg-orange-900 px-3 rounded-2xl w-[17vw] flex justify-center items-center gap-[2vw]">
+                    <p className="text-[#fda4af] playball-regular text-[8vh]">
                     {
                                     yearsInView &&
                                     <CountUp 
@@ -136,7 +138,7 @@ const Section3 = () => {
                                 />
                                 }
                     </p>
-                    <p className="playball-regular text-white text-5xl relative bottom-2">Ongoing<br/>Events</p>
+                    <p className="playball-regular text-white text-[3vh]">Ongoing<br/>Events</p>
                 </div>
                 
             </div>
@@ -145,19 +147,19 @@ const Section3 = () => {
       </div>
       <div className="">
         <div className="bg-orange-100 font-josefin-sans pt-3">
-            <Slider {...sliderSettings} className=" border-black  w-[1800px]">
+            <Slider {...sliderSettings} className=" border-black  w-[90vw]">
                                     
-                <div><p className="text-7xl mb-0 text-orange-700">PLANNING</p></div>
-                <div><p className="text-7xl mb-0 text-orange-700">DESIGNING</p></div>
-                <div><p className="text-7xl mb-0 text-orange-700">DECORATION</p></div>
-                <div><p className="text-7xl mb-0 text-orange-700">FOODS</p></div>
-                <div><p className="text-7xl mb-0 text-orange-700">LOGISTICS</p></div>
-                <div><p className="text-7xl mb-0 text-orange-700">MEDIA</p></div>
-                <div><p className="text-7xl mb-0 text-orange-700">SECURITY</p></div>
+                <div><p className="text-[3.5vw] mb-0 text-orange-700">PLANNING</p></div>
+                <div><p className="text-[3.5vw] mb-0 text-orange-700">DESIGNING</p></div>
+                <div><p className="text-[3.5vw] mb-0 text-orange-700">DECORATION</p></div>
+                <div><p className="text-[3.5vw] mb-0 text-orange-700">FOODS</p></div>
+                <div><p className="text-[3.5vw] mb-0 text-orange-700">LOGISTICS</p></div>
+                <div><p className="text-[3.5vw] mb-0 text-orange-700">MEDIA</p></div>
+                <div><p className="text-[3.5vw] mb-0 text-orange-700">SECURITY</p></div>
                                                     
             </Slider>
         </div>
-        <div data-aos="fade-right" className="flex justify-end relative bottom-[87px] mr-5 text-orange-700">
+        <div data-aos="fade-right" className="flex justify-end relative bottom-[10.5vh] mr-5 text-orange-700">
             <p className="text-7xl">⬲</p>
         </div>
       </div>
