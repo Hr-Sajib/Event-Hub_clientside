@@ -21,7 +21,6 @@ const Partners = () => {
                     <img data-aos="zoom-in" className="h-11 mx-1" src="https://i.postimg.cc/mkRGYVJ3/google.png" alt="" />
                     <img data-aos="zoom-in" className="h-16 mx-2" src="https://i.postimg.cc/76SkJjsY/Mc-Donald-s.png" alt="" />
                     <img data-aos="zoom-in" className="h-11 mx-3" src="https://i.postimg.cc/2yJMHwXX/Radisson-Hotel-Logo-sas.png" alt="" />
-                    <img data-aos="zoom-in" className="h-14 ml-3" src="https://i.postimg.cc/tRtbqQnB/MCI-Group.png" alt="" />
 
                 </div>
                 <div  className="flex gap-10 justify-center mt-16 items-center">
@@ -29,6 +28,7 @@ const Partners = () => {
                     <img data-aos="zoom-in" className="h-20 ml-3" src="https://i.postimg.cc/28xrjpMz/kfc.png" alt="" />
                     <img data-aos="zoom-in" className="h-8 ml-3" src="https://i.postimg.cc/nhtppF0S/nestle-logo-3.png" alt="" />
                     <img data-aos="zoom-in" className="h-10 ml-3" src="https://i.postimg.cc/0jcDxXqc/netflix.png" alt="" />
+                    <img data-aos="zoom-in" className="h-14 ml-3" src="https://i.postimg.cc/tRtbqQnB/MCI-Group.png" alt="" />
 
                 </div>
             </div>

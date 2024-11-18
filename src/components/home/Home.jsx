@@ -102,7 +102,7 @@ const Home = () => {
         <Section3/>
         <UpcomingEvents/>
         <Services/>
-        <Reviews/>
+         <Reviews/>
         <Generator/>
         <Newsletter/>
         <OurTeam/>

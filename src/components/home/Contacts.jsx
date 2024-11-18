@@ -126,10 +126,10 @@ const Contacts = () => {
                             </div>
                             <textarea  required type="text" name="message"   placeholder="Write your message here ..." className="h-36 w-full rounded-3xl p-5"/>
                             
-                            <div className="flex w-3/4 justify-between pl-5 gap-10 bg-white rounded-full mt-10 p-1">
+                            <div className="flex w-[50vw] justify-between pl-5 gap-10 bg-white rounded-full mt-10 p-1">
                                 <div className="flex gap-3 items-center">
                                     <input required  type="checkbox" name="" id="" className="relative bottom-[1px]"/>
-                                    <p className="text-orange-800" >I hold responsibility of being agreed with the company terms and conditions</p>
+                                    <p className="text-orange-800 text-[1vw]" >Agreed with the company terms and conditions</p>
                                 </div>
                                 <div className='relative'>
                                     <input data-aos="fade-right" type="submit" value={` ${loading ? '' : 'Send Us'}`} className="hover:bg-orange-200 rounded-full h-16 w-36 hover:text-orange-900 font-bold p-3 text-xl bg-orange-800 text-white transition-color duration-500 ease-in-out border-0 border-orange-900 hover:border" />

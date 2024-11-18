@@ -138,7 +138,7 @@ const SignUp = () => {
     return (
         <div className='flex justify-center items-center h-[80vh] font-josefin-sans'>
             <ToastContainer />
-            <div className="lg:w-[30vw] flex flex-col items-center lg:p-5 rounded-xl shadow-lg border border-orange-100 shadow-orange-200 mx-2 lg:mx-auto">
+            <div className="lg:w-[40vw] flex flex-col items-center lg:p-5 rounded-xl shadow-lg border border-orange-100 shadow-orange-200 mx-2 lg:mx-auto">
                 <p className='text-2xl text-center mb-6 font-bold text-orange-900'>Sign Up</p>
 
                 <form onSubmit={handleRegister}>

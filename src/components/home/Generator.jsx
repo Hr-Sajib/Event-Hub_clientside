@@ -97,15 +97,15 @@ const Generator = () => {
                 <div data-aos="fade-down" >
                     <img className="h-[100px] mx-auto " src="https://i.postimg.cc/1zzQ8FNn/down-Arrow.png" alt="" />
 
-                    <div className="flex max-w-[1400px] mx-auto">
+                    <div className="flex max-w-[80vw] p-2 border mx-auto">
                         <div data-aos="fade-left">
                             <div className="flex gap-[2px] mb-[5px]">
                                 <div className="bg-orange-200 h-10 flex items-center p-2 w-[200px] rounded-l-md">Venue</div>
-                                <div className="bg-orange-100 h-10 flex items-center p-2 w-[400px]">{venue}</div>
+                                <div className="bg-orange-100 h-10 flex items-center p-2 w-[300px]">{venue}</div>
                             </div>
                             <div className="flex gap-[2px] mb-[5px]">
                                 <div className="bg-orange-200 h-10 flex items-center p-2 w-[200px] rounded-l-md">Decorations</div>
-                                <div className="bg-orange-100 h-auto flex flex-col items-start p-2 w-[400px]">
+                                <div className="bg-orange-100 h-auto flex flex-col items-start p-2 w-[300px]">
                                     {decorations.map((d, index) => (
                                         <p key={index} className="whitespace-pre-line">
                                         {d}
@@ -115,7 +115,7 @@ const Generator = () => {
                             </div>
                             <div className="flex gap-[2px] mb-[5px]">
                                 <div className="bg-orange-200 h-10 flex items-center p-2 w-[200px] rounded-l-md">Catering</div>
-                                <div className="bg-orange-100 h-auto flex flex-col items-start p-2 w-[400px]">
+                                <div className="bg-orange-100 h-auto flex flex-col items-start p-2 w-[300px]">
                                     {catering.map((d, index) => (
                                         <p key={index} className="whitespace-pre-line">
                                         {d}
@@ -125,7 +125,7 @@ const Generator = () => {
                             </div>
                             <div className="flex gap-[2px] mb-[5px]">
                                 <div className="bg-orange-200 h-10 flex items-center p-2 w-[200px] rounded-l-md">Entertainment</div>
-                                <div className="bg-orange-100 h-auto flex flex-col items-start p-2 w-[400px]">
+                                <div className="bg-orange-100 h-auto flex flex-col items-start p-2 w-[300px]">
                                     {entertainment.map((d, index) => (
                                         <p key={index} className="whitespace-pre-line">
                                         {d}
@@ -135,7 +135,7 @@ const Generator = () => {
                             </div>
                             <div className="flex gap-[2px] mb-[5px]">
                                 <div className="bg-orange-200 h-10 flex items-center p-2 w-[200px] rounded-l-md">Activities</div>
-                                <div className="bg-orange-100 h-auto flex flex-col items-start p-2 w-[400px]">
+                                <div className="bg-orange-100 h-auto flex flex-col items-start p-2 w-[300px]">
                                     {activities.map((d, index) => (
                                         <p key={index} className="whitespace-pre-line">
                                         {d}
@@ -145,12 +145,12 @@ const Generator = () => {
                             </div>
                             <div className="flex gap-[2px] mb-[5px]">
                             <div className="bg-orange-200 h-10 flex items-center p-2 w-[200px] rounded-l-md">Duration</div>
-                            <div className="bg-orange-100 h-10 flex items-center p-2 w-[400px]">{duration}</div>
+                            <div className="bg-orange-100 h-10 flex items-center p-2 w-[300px]">{duration}</div>
                             </div>
                         </div>
                     
                         <div className="w-1 bg-orange-300 mx-1 h-[457px]"></div>
-                        <img data-aos="fade-right" className="w-[777px] h-[457px] object-cover  rounded-r-2xl" src="https://i.postimg.cc/9fJrLbfX/rustic-decorated-indoors-wedding-venue-637285-5663.jpg" alt="" />
+                        <img data-aos="fade-right" className="w-[43vw] h-[457px] object-cover  rounded-r-2xl" src="https://i.postimg.cc/9fJrLbfX/rustic-decorated-indoors-wedding-venue-637285-5663.jpg" alt="" />
                     
                     </div>
                     <p className="text-gray-400">This system suggests a basic possible plan for your event. Please consider contacting us to get proffessional Event plan</p>
