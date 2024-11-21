@@ -12,9 +12,17 @@ import Contacts from './Contacts';
 import Partners from './Partners';
 import OurTeam from './OurTeam';
 import UpcomingEvents from './UpcomingEvents';
+import { useState } from 'react';
+import axios from 'axios';
 
 
 const Home = () => {
+
+    const [events, setEvents] = useState([]);
+
+    useEffect(()=>{
+        axios.get('')
+    },[])
 
     useEffect(() => {
         Aos.init();

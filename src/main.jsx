@@ -30,20 +30,6 @@ const router = createBrowserRouter([
       {
         path: "/book",
         element: <BookEvent/>,
-        children:[
-          {
-            path: '/book/',
-            element: <ProvideDetails/>
-          },
-          {
-            path: '/book/bookingTerms',
-            element: <ProvideDetails/>
-          },
-          {
-            path: '/book/fee&confirm',
-            element: <ProvideDetails/>
-          },
-        ]
       },
       {
         path: "/services",

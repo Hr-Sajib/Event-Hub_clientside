@@ -7,6 +7,7 @@ import { deleteUser, reauthenticateWithCredential, EmailAuthProvider, sendPasswo
 import auth from '../../firebase.config';
 import { useNavigate } from 'react-router-dom';
 import { GoogleAuthProvider, reauthenticateWithPopup } from "firebase/auth";
+import axios from 'axios';
 
 const UserPage = () => {
     const [loading, setLoading] = useState(false);
@@ -16,6 +17,7 @@ const UserPage = () => {
     const navigate = useNavigate();
     const [provider, setProvider] = useState(null);
     const [deleteLoading, setDeleteLoading] = useState(false); // Add state for delete loading
+    const [bookings, setBookings] = useState([]);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -149,11 +151,24 @@ const UserPage = () => {
         }
     };
 
+    useEffect(()=>{
+        axios.get('http://localhost:5500/getMyBookings')
+        .then(r=>{
+            const bookings =  (r.data);
+            const myBookings = bookings.filter(b => (b.email === user.email))
+
+            setBookings(myBookings);
+            
+        })
+    },[])
 
 
+
+
+    console.log(bookings);
 
     return (
-        <div className="relative h-[50vh]">
+        <div className="relative min-h-[50vh]">
             {user ? (
                 <div className="font-josefin-sans max-w-[1200px] mx-auto p-6 rounded-2xl mt-10 bg-white">
                     <h1 className="text-4xl text-center text-orange-800 mb-6">Profile Information</h1>
@@ -171,16 +186,56 @@ const UserPage = () => {
                             </div>
                         </div>
                     </div>
+                    <div className="font-josefin-sans max-w-[1200px] mx-auto p-6 rounded-2xl my-10 bg-orange-100">
+                        <p className='text-2xl text-orange-700 mb-4'>My bookings</p>
+                        <div>
+                            {
+                                bookings ?
+                                bookings.map(b => <div className='bg-white mt-5 rounded-xl p-4 flex'>
+                                    <div className='flex  w-[54vw] gap-10'>
+                                        <div>
+                                            <p className='font-bold'>Name </p>
+                                            <p className='font-bold'>Organizer </p>
+                                            <p className='font-bold'>Email </p>
+                                            <p className='font-bold'>Phone </p>
+                                            <p className='font-bold'>Location </p>
+                                            <p className='font-bold'>EventType </p>
+                                            <p className='font-bold'>Guests </p>
+                                            <p className='font-bold'>PackageType </p>
+                                            <p className='font-bold'>Extra Details </p>
+                                        </div>
+                                        <div className=''>
+                                            <p>{b.name}</p>
+                                            <p>{b.organizer}</p>
+                                            <p>{b.email}</p>
+                                            <p>{b.phone}</p>
+                                            <p>{b.location}</p>
+                                            <p>{b.eventType}</p>
+                                            <p>{b.guests}</p>
+                                            <p>{b.packageType}</p>
+                                            <p>{b.details}</p>
+                                        </div>
+                                    </div>
+                                    <div className=''>
+                                        <button className='bg-green-700 mt-[22vh] text-white rounded-md p-1'>Update Information</button>
+                                        <button className='bg-red-800 mt-[22vh] text-white rounded-md p-1 ml-2'>Delete Booking</button>
+                                    </div>
+                                </div> )
+                                :
+                                null
+                            }
+                        </div>
+                    </div>
 
                     <div className="bg-orange-100 p-4 rounded-lg shadow-md">
                         <h2 className="text-2xl text-orange-700 mb-4">
                             You can change password through an email
                         </h2>
 
-                        <div className="relative w-[12.5vw]">
+                        <div className="">
                             <button
                                 onClick={handlePasswordChange}
-                                className="bg-orange-800 w-[12.5vw] rounded-full text-white px-5 h-10 hover:bg-orange-700"
+                                className="bg-orange-800 w-[18vw] rounded-full text-white px-5 h-10 hover:bg-orange-700"
                                 disabled={loading}
                             >
                                 {loading ? '' : 'Send Password Reset Mail'}

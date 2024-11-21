@@ -9,8 +9,6 @@ import { MdOutlineAccessTimeFilled } from "react-icons/md";
 import { MdOutlinePublic } from "react-icons/md";
 import { FaLock } from "react-icons/fa";
 
-{/* <MdOutlinePublic />
-<FaLock /> */}
 
 
 const UpcomingEvents = () => {
@@ -19,9 +17,10 @@ const UpcomingEvents = () => {
     const [focus, setFocus] = useState(null);
 
     useEffect(()=>{
-        axios.get('/upcomingEvents.json')
+        axios.get('http://localhost:5500/getUpcommingEvents')
         .then(r=>{
             setEvent(r.data);
+            
         })
     },[])
 
@@ -33,7 +32,7 @@ const UpcomingEvents = () => {
         return () => clearInterval(interval); // Clean up the interval on unmount
     }, []);
 
-    console.log('up: ', events, 'focus: ', focus);
+    // console.log(events);
 
 
 

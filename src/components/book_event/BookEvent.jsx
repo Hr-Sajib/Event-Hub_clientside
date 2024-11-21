@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
+import ProvideDetails from './provideDetails';
 
 const BookEvent = () => {
     const [detailsDone, setDetailsDone] = useState(false);
@@ -9,25 +10,21 @@ const BookEvent = () => {
 
 
     return (
-        <div className="min-h-screen mt-[7vw]">
+        <div className="">
             
             {/* progress bar  */}
 
             <div className='flex ml-[5vw] items-center'>
                 <p className='bg-slate-200 p-2 px-5 rounded-full'>Provide Details</p>
                 <p>---------------</p>
-                <p className='bg-slate-200 p-2 px-5 rounded-full'>Agree Terms</p>
+                <p className='bg-slate-200 p-2 px-5 rounded-full'>Check Terms</p>
                 <p>---------------</p>
-                <p className='bg-slate-200  p-2 px-5 rounded-full'>Booking Fee  & Confirmation</p>
+                <p className='bg-slate-200  p-2 px-5 rounded-full'>Book</p>
             </div>
 
 
-            <Outlet/>
+            <ProvideDetails/>
 
-
-            <div>
-                
-            </div>
         </div>
     );
 };

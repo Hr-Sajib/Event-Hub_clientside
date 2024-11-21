@@ -11,6 +11,7 @@ const Navbar = () => {
     const navigate = useNavigate();
     const { user, logOut , setShowProfile, showProfile} = useContext(AuthContext);
     const profileIconRef = useRef();
+    console.log(user);
 
 
     useEffect(() => {
