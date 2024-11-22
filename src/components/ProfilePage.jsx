@@ -5,7 +5,7 @@ import Aos from "aos";
 import 'aos/dist/aos.css';
 import { deleteUser, reauthenticateWithCredential, EmailAuthProvider, sendPasswordResetEmail } from "firebase/auth";
 import auth from '../../firebase.config';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { GoogleAuthProvider, reauthenticateWithPopup } from "firebase/auth";
 import axios from 'axios';
 
@@ -160,12 +160,17 @@ const UserPage = () => {
             setBookings(myBookings);
             
         })
-    },[])
+    },[user])
 
-
-
-
-    console.log(bookings);
+    const handleDelete = async(id) =>{
+        try {
+            const response = await axios.delete(`http://localhost:5500/deleteBooking/${id}`);
+            console.log('Booking deletion successful:', response.data);
+        } catch (error) {
+            console.error('Error deletion booking:', error);
+        }
+    }
+    
 
     return (
         <div className="relative min-h-[50vh]">
@@ -191,7 +196,7 @@ const UserPage = () => {
                         <div>
                             {
                                 bookings ?
-                                bookings.map(b => <div className='bg-white mt-5 rounded-xl p-4 flex'>
+                                bookings.map(b => <div data-aos="fade-down" className='bg-white mt-5 rounded-xl p-4 flex'>
                                     <div className='flex  w-[54vw] gap-10'>
                                         <div>
                                             <p className='font-bold'>Name </p>
@@ -217,8 +222,8 @@ const UserPage = () => {
                                         </div>
                                     </div>
                                     <div className=''>
-                                        <button className='bg-green-700 mt-[22vh] text-white rounded-md p-1'>Update Information</button>
-                                        <button className='bg-red-800 mt-[22vh] text-white rounded-md p-1 ml-2'>Delete Booking</button>
+                                        <Link to={`updateBooking/${b._id}`}><button className='bg-green-700 mt-[22vh] text-white rounded-md p-1'>Update Information</button></Link>
+                                        <button onClick={()=>handleDelete(b._id)} className='bg-red-800 mt-[22vh] text-white rounded-md p-1 ml-2'>Delete Booking</button>
                                     </div>
                                 </div> )
                                 :

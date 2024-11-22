@@ -16,7 +16,7 @@ import LogIn from './components/AuthProvider/LogIn';
 import AuthProvider from './components/AuthProvider/AuthProvider';
 import TermsAndConditions from './components/TermsAndConditions';
 import ProfilePage from './components/ProfilePage';
-import ProvideDetails from './components/book_event/provideDetails';
+import UpdateBooking from './components/UpdateBooking';
 
 const router = createBrowserRouter([
   {
@@ -62,6 +62,11 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: <ProfilePage/>,
+      },
+      {
+        path: "/profile/updateBooking/:id",
+        loader: ({params}) => fetch(`http://localhost:5500/getMyBooking/${params.id}`),
+        element: <UpdateBooking/>,
       },
 
     ]
