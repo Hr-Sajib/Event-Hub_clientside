@@ -14,11 +14,11 @@ const OurTeam = () => {
 
 
     return (
-        <div className=" mt-[250px] mx-[5vw]">
+        <div className=" mt-[250px] mx-[1vw]">
             
             
             
-            <div className="bg-orange-950 h-[15vh]">
+            <div className="bg-orange-950 h-[15vh] ">
                 <div className="rotateAr shadow-md shadow-orange-900 border border-orange-900 rotate-45 bg-white h-[18vh] w-[18vh]  relative rounded-full left-[5vw] top-[3vw] text-9xl text-black flex justify-center items-center">→</div>
                 
                 <div className="relative bottom-[6.5vh]">
@@ -35,7 +35,7 @@ const OurTeam = () => {
             <div className="flex justify-between h-[60vh] bg-gradient-to-r to-orange-100 from-gray-100 pr-[5vh]">
                 {/* text  */}
                 <div data-aos="fade-down" className="pt-[10vh] pl-[5vh]">
-                    <p className="font-oswald text-9xl">Unite<br/>For<br/>Excellence</p>
+                    <p className="font-oswald text-[5vw]">Unite<br/>For<br/>Excellence</p>
                 </div>
 
                 {/* persons  */}

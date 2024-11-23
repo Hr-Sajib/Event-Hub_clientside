@@ -2,6 +2,7 @@ import { async } from '@firebase/util';
 import axios from 'axios';
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const UpdateBooking = () => {
     const bookingData = useLoaderData();
@@ -38,6 +39,12 @@ const UpdateBooking = () => {
         try {
             const response = await axios.put(`http://localhost:5500/updateBooking/${bookingData._id}`, newBooking);
             console.log('Booking Update successful:', response.data);
+            Swal.fire({
+                title: "Updated",
+                text: "Your booking has been updated.",
+                icon: "success",
+                confirmButtonColor: '#b81311'
+            });
         } catch (error) {
             console.error('Error updating booking:', error);
         }

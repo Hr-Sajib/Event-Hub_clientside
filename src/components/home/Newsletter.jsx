@@ -50,7 +50,7 @@ const Newsletter = () => {
       
 
     return (
-        <div className="font-josefin-sans flex gap-5 w-[95vw] h-[400px] mx-auto border-2 border-r-[7px] rounded-br-[100px] border-orange-300 border-b-[7px] rounded-2xl mt-[300px] mb-36">
+        <div className="font-josefin-sans flex gap-5 w-[95vw] h-[44.5vh] mx-auto border-2 border-r-[7px] rounded-br-[100px] border-orange-300 border-b-[7px] rounded-2xl mt-[300px] mb-36">
             <img data-aos="fade-up" className="h-[400px] relative bottom-2" src="https://i.ibb.co/SywLszb/view-3d-man-using-laptop.png" alt="Newsletter Illustration" />
             <div>
                 <div data-aos="fade-up" className="bg-white relative bottom-[14vh] left-[20vw] w-[560px] flex flex-col justify-center items-center">

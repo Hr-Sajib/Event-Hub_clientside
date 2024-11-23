@@ -5,7 +5,7 @@ import Aos from "aos";
 import 'aos/dist/aos.css';
 import { deleteUser, reauthenticateWithCredential, EmailAuthProvider, sendPasswordResetEmail } from "firebase/auth";
 import auth from '../../firebase.config';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useActionData, useNavigate } from 'react-router-dom';
 import { GoogleAuthProvider, reauthenticateWithPopup } from "firebase/auth";
 import axios from 'axios';
 
@@ -16,12 +16,17 @@ const UserPage = () => {
     const [newPassword, setNewPassword] = useState('');
     const navigate = useNavigate();
     const [provider, setProvider] = useState(null);
-    const [deleteLoading, setDeleteLoading] = useState(false); // Add state for delete loading
+    const [deleteLoading, setDeleteLoading] = useState(false);
     const [bookings, setBookings] = useState([]);
+    const [showBookings, setShowBookings] = useState([]);
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
+    useEffect(() => {
+        setShowBookings(bookings);
+    }, [bookings]);
 
     useEffect(() => {
         user && user.providerData ? setProvider(user.providerData[0].providerId) : null;
@@ -40,7 +45,6 @@ const UserPage = () => {
                     });
                 })
                 .catch((error) => {
-                    // Handle errors here
                     Swal.fire({
                         icon: 'error',
                         title: '<p style="color: #7c2d12;">Error Password Resetting</p>',
@@ -48,7 +52,7 @@ const UserPage = () => {
                         confirmButtonText: 'OK',
                         confirmButtonColor: '#7c2d12'
                     });
-                    console.log('Error:', error.message); // Optional logging
+                    console.log('Error:', error.message);
                 });
     
         } catch (error) {
@@ -59,7 +63,7 @@ const UserPage = () => {
                 confirmButtonText: 'OK',
                 confirmButtonColor: '#7c2d12'
             });
-            console.log('Error:', error.message); // Optional logging
+            console.log('Error:', error.message);
         }
         setLoading(false);
     };
@@ -67,7 +71,7 @@ const UserPage = () => {
 
     const handleDeleteAccount = async (e) => {
         e.preventDefault();
-        setDeleteLoading(true); // Start delete loading
+        setDeleteLoading(true);
         const password = e.target.password.value;
 
         const credential = EmailAuthProvider.credential(user.email, password);
@@ -109,17 +113,12 @@ const UserPage = () => {
         const provider = new GoogleAuthProvider();  // Create an instance of Google Auth provider
     
         try {
-            // Step 1: Reauthenticate user with Google
             await reauthenticateWithPopup(user, provider);
             console.log("User reauthenticated successfully");
     
-            // Step 2: Delete user account
             await deleteUser(user);
             console.log("User account deleted successfully");
-    
-            // Optional: Redirect to a different page or show a success message
-            // navigate('/login');  // Navigate to login or another page
-            // Or display a success message to the user
+
             setShowDeleteOption(false);
             Swal.fire({
                 icon: 'success',
@@ -162,15 +161,38 @@ const UserPage = () => {
         })
     },[user])
 
-    const handleDelete = async(id) =>{
-        try {
-            const response = await axios.delete(`http://localhost:5500/deleteBooking/${id}`);
-            console.log('Booking deletion successful:', response.data);
-        } catch (error) {
-            console.error('Error deletion booking:', error);
-        }
-    }
-    
+    const handleDelete = (id) => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5500/deleteBooking/${id}`, {
+                    method: "DELETE"
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        Swal.fire({
+                            title: "Deleted!",
+                            text: "Your booking has been deleted.",
+                            icon: "success",
+                            confirmButtonColor: '#b81311'
+                        });
+                        const remainingArticles = bookings.filter(b => b._id !== id);
+                        setShowBookings(remainingArticles);
+                    }
+                });
+            }
+        });
+    };
+
+
 
     return (
         <div className="relative min-h-[50vh]">
@@ -195,8 +217,8 @@ const UserPage = () => {
                         <p className='text-2xl text-orange-700 mb-4'>My bookings</p>
                         <div>
                             {
-                                bookings ?
-                                bookings.map(b => <div data-aos="fade-down" className='bg-white mt-5 rounded-xl p-4 flex'>
+                                showBookings.length > 0 ?
+                                showBookings.map(b => <div data-aos="fade-down" className='bg-white mt-5 rounded-xl p-4 flex'>
                                     <div className='flex  w-[54vw] gap-10'>
                                         <div>
                                             <p className='font-bold'>Name </p>
@@ -227,7 +249,7 @@ const UserPage = () => {
                                     </div>
                                 </div> )
                                 :
-                                null
+                                <p>No bookings to show</p>
                             }
                         </div>
                     </div>

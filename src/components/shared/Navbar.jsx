@@ -116,7 +116,7 @@ const Navbar = () => {
                         // user signed in 
                         user ?
                         <div className='flex justify-center items-center'>
-                            <button ref={profileIconRef} onClick={()=>setShowProfile(!showProfile)}><img className='h-[5vh] w-[5vh] ml-[6vh] border-[5px] border-orange-900 rounded-full' src={ user.photoURL ||  'https://i.postimg.cc/B67jKZxT/user-9303328.png'} alt="" /></button>
+                            <button ref={profileIconRef} onClick={()=>setShowProfile(!showProfile)}><img className='h-[6vh] w-[6vh] ml-[6vh] border-[5px] border-orange-900 rounded-full' src={ user.photoURL ||  'https://i.postimg.cc/B67jKZxT/user-9303328.png'} alt="" /></button>
                         </div> 
                         :
                         // user not signed in 

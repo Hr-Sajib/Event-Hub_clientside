@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React from 'react';
+import Swal from 'sweetalert2';
 import TermsAndConditions from './TermsAndConditions';
 
 const ProvideDetails = () => {
@@ -37,6 +38,24 @@ const ProvideDetails = () => {
         try {
             const response = await axios.post('http://localhost:5500/book-event', newBooking);
             console.log('Booking successful:', response.data);
+            Swal.fire({
+                title: 'Success!',
+                text: 'Booking request successful!',
+                icon: 'success',
+                confirmButtonText: 'OK',
+                confirmButtonColor: '#DD4F25'
+              })
+                e.target.eventName.value = '';
+                e.target.organizerName.value = '';
+                e.target.contactEmail.value = '';
+                e.target.eventDate.value = '';
+                e.target.eventTime.value = '';
+                e.target.location.value = '';
+                e.target.eventType.value = '';
+                e.target.numberOfGuests.value = '';
+                e.target.packageType.value = '';
+                e.target.additionalDetails.value = '';
+                e.target.phone.value = '';
         } catch (error) {
             console.error('Error submitting booking:', error);
         }
@@ -45,7 +64,7 @@ const ProvideDetails = () => {
 
     return (
         <div className="flex min-h-screen ml-16 mt-10 gap-16">
-            <form onSubmit={handleSubmit} className="w-full max-w-lg bg-orange-100 p-6 rounded-lg h-[135vh]">
+            <form onSubmit={handleSubmit} className="w-full max-w-lg bg-orange-100 p-6 rounded-lg ">
                 <h2 className="text-2xl font-bold mb-6 text-center">Event Booking Form</h2>
 
                 {/* Form Fields */}
