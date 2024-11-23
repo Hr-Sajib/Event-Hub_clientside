@@ -97,7 +97,7 @@ const Generator = () => {
                 <div data-aos="fade-down" >
                     <img className="h-[100px] mx-auto " src="https://i.postimg.cc/1zzQ8FNn/down-Arrow.png" alt="" />
 
-                    <div className="flex max-w-[80vw] p-2 border mx-auto">
+                    <div className="flex max-w-[80vw] p-2 mx-auto">
                         <div data-aos="fade-left">
                             <div className="flex gap-[2px] mb-[5px]">
                                 <div className="bg-orange-200 h-10 flex items-center p-2 w-[200px] rounded-l-md">Venue</div>
